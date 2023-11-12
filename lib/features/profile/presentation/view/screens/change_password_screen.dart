@@ -1,13 +1,13 @@
 import 'package:crow/crow.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_structure/features/base/utils/namespaces/app_colors.dart';
-import 'package:flutter_structure/features/base/utils/namespaces/images.dart';
-import 'package:flutter_structure/features/base/widgets/app_button.dart';
-import 'package:flutter_structure/features/base/widgets/app_circular_progress.dart';
-import 'package:flutter_structure/features/base/widgets/app_text_field.dart';
-import 'package:flutter_structure/features/profile/presentation/view_models/profile_view_model.dart';
-import 'package:flutter_structure/features/signup/presentation/view/widgets/password_strength_widget.dart';
+import 'package:game_board_scores/features/base/utils/namespaces/app_colors.dart';
+import 'package:game_board_scores/features/base/utils/namespaces/images.dart';
+import 'package:game_board_scores/features/base/widgets/app_button.dart';
+import 'package:game_board_scores/features/base/widgets/app_circular_progress.dart';
+import 'package:game_board_scores/features/base/widgets/app_text_field.dart';
+import 'package:game_board_scores/features/profile/presentation/view_models/profile_view_model.dart';
+import 'package:game_board_scores/features/signup/presentation/view/widgets/password_strength_widget.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 

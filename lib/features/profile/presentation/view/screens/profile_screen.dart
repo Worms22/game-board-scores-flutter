@@ -1,9 +1,9 @@
 import 'package:crow/crow.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_structure/features/base/utils/namespaces/app_colors.dart';
-import 'package:flutter_structure/features/profile/presentation/view/widgets/setting_section.dart';
-import 'package:flutter_structure/features/profile/presentation/view/widgets/user_section.dart';
-import 'package:flutter_structure/features/profile/presentation/view_models/profile_view_model.dart';
+import 'package:game_board_scores/features/base/utils/namespaces/app_colors.dart';
+import 'package:game_board_scores/features/profile/presentation/view/widgets/setting_section.dart';
+import 'package:game_board_scores/features/profile/presentation/view/widgets/user_section.dart';
+import 'package:game_board_scores/features/profile/presentation/view_models/profile_view_model.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 

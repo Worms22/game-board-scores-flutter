@@ -1,7 +1,7 @@
 import 'package:crow/crow.dart';
-import 'package:flutter_structure/features/base/router/app_routes.dart';
-import 'package:flutter_structure/features/home/bindings/home_bindings.dart';
-import 'package:flutter_structure/features/home/presentation/view/screens/home_screen.dart';
+import 'package:game_board_scores/features/base/router/app_routes.dart';
+import 'package:game_board_scores/features/home/bindings/home_bindings.dart';
+import 'package:game_board_scores/features/home/presentation/view/screens/home_screen.dart';
 
 
 class HomePage extends Page<dynamic> {

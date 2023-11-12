@@ -1,10 +1,10 @@
 import 'package:crow/crow.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_structure/features/base/utils/namespaces/app_colors.dart';
-import 'package:flutter_structure/features/home/presentation/view/screens/home_screen.dart';
-import 'package:flutter_structure/features/main_structure/domain/main_structure_repository.dart';
-import 'package:flutter_structure/features/profile/presentation/view/screens/profile_screen.dart';
-import 'package:flutter_structure/features/saved/presentation/view/screens/saved_screen.dart';
+import 'package:game_board_scores/features/base/utils/namespaces/app_colors.dart';
+import 'package:game_board_scores/features/home/presentation/view/screens/home_screen.dart';
+import 'package:game_board_scores/features/main_structure/domain/main_structure_repository.dart';
+import 'package:game_board_scores/features/profile/presentation/view/screens/profile_screen.dart';
+import 'package:game_board_scores/features/saved/presentation/view/screens/saved_screen.dart';
 import 'package:get/get.dart';
 
 class MainViewModel extends ViewModel with StateMixin<dynamic> {

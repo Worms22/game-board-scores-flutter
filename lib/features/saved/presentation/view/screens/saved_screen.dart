@@ -1,6 +1,6 @@
 import 'package:crow/crow.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_structure/features/saved/presentation/view_models/saved_view_model.dart';
+import 'package:game_board_scores/features/saved/presentation/view_models/saved_view_model.dart';
 import 'package:get/get.dart';
 
 class SavedScreen extends Screen<SavedViewModel> {

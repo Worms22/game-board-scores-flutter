@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_structure/features/base/utils/namespaces/app_colors.dart';
-import 'package:flutter_structure/features/base/utils/namespaces/app_styles.dart';
-import 'package:flutter_structure/features/base/utils/namespaces/font_size.dart';
-import 'package:flutter_structure/features/base/utils/namespaces/fonts.dart';
+import 'package:game_board_scores/features/base/utils/namespaces/app_colors.dart';
+import 'package:game_board_scores/features/base/utils/namespaces/app_styles.dart';
+import 'package:game_board_scores/features/base/utils/namespaces/font_size.dart';
+import 'package:game_board_scores/features/base/utils/namespaces/fonts.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 

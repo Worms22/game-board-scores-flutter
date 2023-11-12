@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_structure/features/startpage/presentation/view/widgets/stepper_widget.dart';
+import 'package:game_board_scores/features/startpage/presentation/view/widgets/stepper_widget.dart';
 import 'package:get/get.dart';
 
 Widget carouselWidget({

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.flutter_structure">
+    package="com.example.game_board_scores">
    <application
-        android:label="flutter_structure"
+        android:label="game_board_scores"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

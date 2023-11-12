@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_structure/features/base/utils/namespaces/app_colors.dart';
+import 'package:game_board_scores/features/base/utils/namespaces/app_colors.dart';
 
 class AppCircularProgress extends StatelessWidget {
   const AppCircularProgress({

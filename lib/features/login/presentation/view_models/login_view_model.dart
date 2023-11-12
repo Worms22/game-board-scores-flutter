@@ -1,9 +1,9 @@
 import 'package:crow/crow.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_structure/features/base/router/app_routes.dart';
-import 'package:flutter_structure/features/base/utils/typedefs.dart';
-import 'package:flutter_structure/features/login/domain/login_repository.dart';
+import 'package:game_board_scores/features/base/router/app_routes.dart';
+import 'package:game_board_scores/features/base/utils/typedefs.dart';
+import 'package:game_board_scores/features/login/domain/login_repository.dart';
 import 'package:get/get.dart';
 
 class LoginViewModel extends ViewModel with StateMixin<dynamic> {

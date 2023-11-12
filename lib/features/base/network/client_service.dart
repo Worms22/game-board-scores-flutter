@@ -2,7 +2,7 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:crow/crow.dart';
 import 'package:dio/dio.dart';
 import 'package:duckma_client/duckma_client.dart';
-import 'package:flutter_structure/features/base/api/api.dart';
+import 'package:game_board_scores/features/base/api/api.dart';
 import 'package:get/get.dart';
 
 class ClientService extends Service {

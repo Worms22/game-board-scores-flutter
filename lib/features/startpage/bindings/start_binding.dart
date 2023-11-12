@@ -1,5 +1,5 @@
 import 'package:crow/crow.dart';
-import 'package:flutter_structure/features/startpage/presentation/view_models/start_view_model.dart';
+import 'package:game_board_scores/features/startpage/presentation/view_models/start_view_model.dart';
 import 'package:get/get.dart';
 
 

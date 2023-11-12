@@ -1,6 +1,7 @@
 import 'package:crow/crow.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_structure/features/home/presentation/view_models/home_view_model.dart';
+import 'package:game_board_scores/features/base/widgets/app_button.dart';
+import 'package:game_board_scores/features/home/presentation/view_models/home_view_model.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends Screen<HomeViewModel> {
@@ -18,11 +19,16 @@ class HomeScreen extends Screen<HomeViewModel> {
                   SizedBox(
                     height: Get.height * 0.3,
                   ),
-                  const Center(child: Text('Home')),
+                  const Center(
+                    child: Text('Home'),
+                  ),
+                  AppButton(
+                    label: 'Sushi GO',
+                    onTap: () => viewModel.goToSushiGo(),
+                  ),
                   SizedBox(
                     height: Get.height * 0.3,
                   ),
-
                 ],
               ),
             ),

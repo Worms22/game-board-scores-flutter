@@ -1,6 +1,6 @@
 import 'package:crow/crow.dart';
-import 'package:flutter_structure/features/base/app/presentation/app_view_model.dart';
-import 'package:flutter_structure/features/base/network/client_service.dart';
+import 'package:game_board_scores/features/base/app/presentation/app_view_model.dart';
+import 'package:game_board_scores/features/base/network/client_service.dart';
 import 'package:get/get.dart';
 
 class AppBinding extends Binding {

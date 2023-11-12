@@ -2,7 +2,8 @@ import 'dart:async';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:crow/crow.dart';
-import 'package:flutter_structure/features/home/domain/home_repository.dart';
+import 'package:game_board_scores/features/base/router/app_routes.dart';
+import 'package:game_board_scores/features/home/domain/home_repository.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -35,6 +36,10 @@ class HomeViewModel extends ViewModel with StateMixin<dynamic> {
   Future<void> init() async {
     super.onReady();
     change(null, status: RxStatus.success());
+  }
+
+  goToSushiGo(){
+    Get.toNamed(Routes.sushiGo);
   }
 
 

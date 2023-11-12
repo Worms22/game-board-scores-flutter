@@ -1,4 +1,4 @@
-package com.example.flutter_structure
+package com.example.game_board_scores
 
 import io.flutter.embedding.android.FlutterActivity
 

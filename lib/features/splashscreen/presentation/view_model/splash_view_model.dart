@@ -1,6 +1,6 @@
 import 'package:crow/crow.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:flutter_structure/features/base/router/app_routes.dart';
+import 'package:game_board_scores/features/base/router/app_routes.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

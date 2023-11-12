@@ -1,8 +1,8 @@
 import 'package:crow/crow.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_structure/features/base/utils/namespaces/images.dart';
-import 'package:flutter_structure/features/main_structure/main_view_model.dart';
+import 'package:game_board_scores/features/base/utils/namespaces/images.dart';
+import 'package:game_board_scores/features/main_structure/main_view_model.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 

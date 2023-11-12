@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_structure/features/base/utils/namespaces/images.dart';
-import 'package:flutter_structure/features/base/widgets/app_text_field.dart';
-import 'package:flutter_structure/features/login/presentation/view_models/login_view_model.dart';
+import 'package:game_board_scores/features/base/utils/namespaces/images.dart';
+import 'package:game_board_scores/features/base/widgets/app_text_field.dart';
+import 'package:game_board_scores/features/login/presentation/view_models/login_view_model.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 

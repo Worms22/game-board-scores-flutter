@@ -4,12 +4,12 @@ import 'package:flutter/services.dart' as service;
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_environment/flutter_environment.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_structure/features/base/app/bindings/app_binding.dart';
-import 'package:flutter_structure/features/base/app/presentation/app_view_model.dart';
-import 'package:flutter_structure/features/base/router/app_router.dart';
-import 'package:flutter_structure/features/base/sevrices/navigation_service.dart';
-import 'package:flutter_structure/features/base/theme/app_theme.dart';
-import 'package:flutter_structure/features/base/utils/env.dart';
+import 'package:game_board_scores/features/base/app/bindings/app_binding.dart';
+import 'package:game_board_scores/features/base/app/presentation/app_view_model.dart';
+import 'package:game_board_scores/features/base/router/app_router.dart';
+import 'package:game_board_scores/features/base/sevrices/navigation_service.dart';
+import 'package:game_board_scores/features/base/theme/app_theme.dart';
+import 'package:game_board_scores/features/base/utils/env.dart';
 import 'package:get/get.dart';
 
 

@@ -1,15 +1,15 @@
 import 'package:crow/crow.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_structure/features/base/extensions/localizations_extension.dart';
-import 'package:flutter_structure/features/base/utils/namespaces/app_colors.dart';
-import 'package:flutter_structure/features/base/utils/namespaces/images.dart';
-import 'package:flutter_structure/features/base/widgets/app_button.dart';
-import 'package:flutter_structure/features/base/widgets/app_circular_progress.dart';
-import 'package:flutter_structure/features/signup/presentation/view/widgets/input_data_section.dart';
-import 'package:flutter_structure/features/signup/presentation/view/widgets/no_account_section.dart';
-import 'package:flutter_structure/features/signup/presentation/view/widgets/privacy_section.dart';
-import 'package:flutter_structure/features/signup/presentation/view/widgets/text_section.dart';
-import 'package:flutter_structure/features/signup/presentation/view_models/signup_view_model.dart';
+import 'package:game_board_scores/features/base/extensions/localizations_extension.dart';
+import 'package:game_board_scores/features/base/utils/namespaces/app_colors.dart';
+import 'package:game_board_scores/features/base/utils/namespaces/images.dart';
+import 'package:game_board_scores/features/base/widgets/app_button.dart';
+import 'package:game_board_scores/features/base/widgets/app_circular_progress.dart';
+import 'package:game_board_scores/features/signup/presentation/view/widgets/input_data_section.dart';
+import 'package:game_board_scores/features/signup/presentation/view/widgets/no_account_section.dart';
+import 'package:game_board_scores/features/signup/presentation/view/widgets/privacy_section.dart';
+import 'package:game_board_scores/features/signup/presentation/view/widgets/text_section.dart';
+import 'package:game_board_scores/features/signup/presentation/view_models/signup_view_model.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 

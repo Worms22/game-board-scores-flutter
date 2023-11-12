@@ -16,7 +16,7 @@ AppLocalizations.of(context).helloWorld;
 
 // or 
 
-import 'package:flutter_structure/features/base/extensions/localizations_extension.dart';
+import 'package:game_board_scores/features/base/extensions/localizations_extension.dart';
 
 // by `tr` getter
 

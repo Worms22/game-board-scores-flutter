@@ -1,6 +1,6 @@
-import 'package:flutter_structure/features/base/token/domain/entity/token_entity.dart';
-import 'package:flutter_structure/features/base/token/domain/token_local_data_source.dart';
-import 'package:flutter_structure/features/base/token/domain/token_repository.dart';
+import 'package:game_board_scores/features/base/token/domain/entity/token_entity.dart';
+import 'package:game_board_scores/features/base/token/domain/token_local_data_source.dart';
+import 'package:game_board_scores/features/base/token/domain/token_repository.dart';
 
 class TokenRepositoryImpl extends TokenRepository {
   TokenRepositoryImpl(this._tokenLocalDataSource);

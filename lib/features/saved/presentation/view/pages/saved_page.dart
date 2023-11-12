@@ -1,7 +1,7 @@
 import 'package:crow/crow.dart';
-import 'package:flutter_structure/features/base/router/app_routes.dart';
-import 'package:flutter_structure/features/saved/bindings/saved_bindings.dart';
-import 'package:flutter_structure/features/saved/presentation/view/screens/saved_screen.dart';
+import 'package:game_board_scores/features/base/router/app_routes.dart';
+import 'package:game_board_scores/features/saved/bindings/saved_bindings.dart';
+import 'package:game_board_scores/features/saved/presentation/view/screens/saved_screen.dart';
 
 
 class SavedPage extends Page<dynamic> {

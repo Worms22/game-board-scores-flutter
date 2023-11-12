@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_structure/features/base/failures/server_failure/server_failure.dart';
-import 'package:flutter_structure/features/base/utils/typedefs.dart';
+import 'package:game_board_scores/features/base/failures/server_failure/server_failure.dart';
+import 'package:game_board_scores/features/base/utils/typedefs.dart';
 
 extension ResponseExtension<T> on Response<T> {
   ServerFailure? get failure {

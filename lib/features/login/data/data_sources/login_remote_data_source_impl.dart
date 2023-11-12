@@ -1,7 +1,7 @@
 import 'dart:convert';
-import 'package:flutter_structure/features/base/utils/constants.dart';
-import 'package:flutter_structure/features/login/data/data_sources/login_remote_data_source.dart';
-import 'package:flutter_structure/main.dart';
+import 'package:game_board_scores/features/base/utils/constants.dart';
+import 'package:game_board_scores/features/login/data/data_sources/login_remote_data_source.dart';
+import 'package:game_board_scores/main.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
