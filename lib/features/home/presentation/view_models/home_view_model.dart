@@ -1,7 +1,9 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:crow/crow.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:game_board_scores/features/base/router/app_routes.dart';
 import 'package:game_board_scores/features/base/utils/namespaces/images.dart';
 import 'package:game_board_scores/features/home/domain/entities/game_entity.dart';
@@ -21,6 +23,12 @@ class HomeViewModel extends ViewModel with StateMixin<dynamic> {
   RxBool isConnected = true.obs;
   String detailTitle = '';
   String? token;
+  TextEditingController controller1 = TextEditingController();
+  TextEditingController controller2 = TextEditingController();
+  TextEditingController controller3 = TextEditingController();
+  TextEditingController controller4 = TextEditingController();
+  TextEditingController controller5 = TextEditingController();
+
   List<HomeGameEntity> listOfGame = <HomeGameEntity>[
     HomeGameEntity(
       id: 1,
@@ -30,7 +38,7 @@ class HomeViewModel extends ViewModel with StateMixin<dynamic> {
       image: Images.sushiGo,
     ),
     HomeGameEntity(
-      id: 1,
+      id: 2,
       title: 'Select player',
       image: Images.selectPlayer,
       firstPlayer: true,
@@ -64,6 +72,17 @@ class HomeViewModel extends ViewModel with StateMixin<dynamic> {
     if(isFirstPlayer){
       Get.toNamed(Routes.selectPlayers);
     }
+  }
+
+  void selectAction(int id){
+    if(id == 2){
+      goToFirstPlayer(isFirstPlayer: true);
+    }
+  }
+
+  void randomlySelectFirstPlayer(){
+    final List<String> list = [controller1.text, controller2.text, controller3.text, controller4.text, controller5.text];
+    Get.defaultDialog(title: list.elementAt(Random().nextInt(list.length)));
   }
 
 

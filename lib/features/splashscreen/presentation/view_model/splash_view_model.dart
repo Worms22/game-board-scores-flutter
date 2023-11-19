@@ -31,7 +31,7 @@ class SplashViewModel extends ViewModel with StateMixin<dynamic> {
   Future<void> navigateToMainScreen() async {
     FlutterNativeSplash.remove();
     await Future<void>.delayed(const Duration(seconds: 2));
-    await Get.toNamed(Routes.mainPage);
+    await Get.offAndToNamed(Routes.mainPage);
   }
 
   Future<void> navigateToStartPage() async {

@@ -1,7 +1,7 @@
 import 'package:crow/crow.dart';
 import 'package:game_board_scores/features/base/router/app_routes.dart';
-import 'package:game_board_scores/features/base/select_players/presentation/view/pages/select_players_page.dart';
 import 'package:game_board_scores/features/home/presentation/view/pages/home_page.dart';
+import 'package:game_board_scores/features/home/presentation/view/pages/select_player_page.dart';
 import 'package:game_board_scores/features/login/presentation/view/pages/login_page.dart';
 import 'package:game_board_scores/features/main_structure/presentation/page/main_page.dart';
 import 'package:game_board_scores/features/profile/presentation/view/pages/change_password_page.dart';
@@ -30,7 +30,7 @@ abstract class AppRouter {
       SavedPage(),
       ProfilePage(),
       ChangePasswordPage(),
-      SelectPlayersPage(),
+      SelectPlayerPage(),
       SushiGoPage(),
     ];
   }

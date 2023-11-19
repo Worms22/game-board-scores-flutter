@@ -29,11 +29,14 @@ class HomeScreen extends Screen<HomeViewModel> {
                     crossAxisCount: 2,
                     children: [
                       for (final item in viewModel.listOfGame)
-                        homeCard(
-                            name: item.title ?? '',
-                            image: item.image ?? Images.splashLogo,
-                            time: item.time,
-                            players: item.players,)
+                        GestureDetector(
+                          onTap: () => viewModel.selectAction(item.id),
+                          child: homeCard(
+                              name: item.title ?? '',
+                              image: item.image ?? Images.splashLogo,
+                              time: item.time,
+                              players: item.players,),
+                        )
                     ],
                   ),
                 ),
