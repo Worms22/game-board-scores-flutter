@@ -19,6 +19,11 @@ extension Images on Never {
   static const String savedIcon = 'assets/images/savedIcon.svg';
   static const String profileIcon = 'assets/images/profileIcon.svg';
 
+  //games
+  static const String sushiGo = 'assets/images/sushi-go.jpg';
+  static const String selectPlayer = 'assets/images/spin-wheel.png';
+
+
   Widget customSvgAsset({
     String? svgImage,
     double? height,

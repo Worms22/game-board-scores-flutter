@@ -75,7 +75,7 @@ Widget homeCard({
                     size: 20,
                   ),
                 ),
-                label: Text(players ?? ''),
+                label: Text(time ?? ''),
                 shape: const StadiumBorder(
                 ),
               )

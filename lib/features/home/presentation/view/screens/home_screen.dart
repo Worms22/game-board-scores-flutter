@@ -27,9 +27,14 @@ class HomeScreen extends Screen<HomeViewModel> {
                     mainAxisSpacing: 10,
                     crossAxisSpacing: 10,
                     crossAxisCount: 2,
-                    children: List<Widget>.generate(3, (int index) {
-                      return homeCard( name: 'Sushi', image: Images.splashLogo, time: '10', players: '6-2');
-                    }),
+                    children: [
+                      for (final item in viewModel.listOfGame)
+                        homeCard(
+                            name: item.title ?? '',
+                            image: item.image ?? Images.splashLogo,
+                            time: item.time,
+                            players: item.players,)
+                    ],
                   ),
                 ),
               ),

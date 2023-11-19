@@ -22,7 +22,9 @@ class SplashViewModel extends ViewModel with StateMixin<dynamic> {
     if (accessToken != null && accessToken.isNotEmpty) {
       await navigateToMainScreen();
     } else {
-      await navigateToStartPage();
+      await navigateToMainScreen();
+
+     // await navigateToStartPage();
     }
   }
 
