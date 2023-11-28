@@ -45,7 +45,7 @@ class MyApp extends Crow.View<AppViewModel> {
     return Obx(
       () => GetMaterialApp(
         theme: AppTheme().light(),
-        darkTheme: AppTheme().dark(),
+        darkTheme: AppTheme().light(),
         navigatorKey: NavigationService.navigatorKey,
         themeMode: viewModel.themeModeService.themeMode.value,
         supportedLocales: AppLocalizations.supportedLocales,
