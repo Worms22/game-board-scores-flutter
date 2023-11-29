@@ -7,7 +7,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class AppTextField extends StatelessWidget {
-  const AppTextField({
+   AppTextField({
     super.key,
     TextEditingController? controller,
     String? hint,
@@ -26,6 +26,7 @@ class AppTextField extends StatelessWidget {
     VoidCallback? suffixCallBack,
     bool? isClearSuffix = false,
     bool? isAutoCorrection = true,
+    double? width,
   })  : _controller = controller,
         _hint = hint,
         _errorText = errorText,
@@ -42,7 +43,8 @@ class AppTextField extends StatelessWidget {
         _isReadable = isReadable,
         _suffixCallBack = suffixCallBack,
         _isClearSuffix = isClearSuffix,
-        _isAutoCorrection = isAutoCorrection;
+        _isAutoCorrection = isAutoCorrection,
+        _width = width;
 
   final TextEditingController? _controller;
   final String? _hint;
@@ -61,12 +63,13 @@ class AppTextField extends StatelessWidget {
   final VoidCallback? _suffixCallBack;
   final bool? _isClearSuffix;
   final bool? _isAutoCorrection;
+  final double? _width;
 
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: Get.width,
+      width: _width ?? Get.width,
       child: TextField(
         cursorColor: AppColors.black,
         readOnly: _isReadable!,

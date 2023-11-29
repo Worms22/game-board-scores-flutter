@@ -6,11 +6,14 @@ import 'package:crow/crow.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:game_board_scores/features/base/router/app_routes.dart';
+import 'package:game_board_scores/features/base/utils/namespaces/app_colors.dart';
 import 'package:game_board_scores/features/base/utils/namespaces/images.dart';
+import 'package:game_board_scores/features/base/widgets/app_text_field.dart';
 import 'package:game_board_scores/features/home/domain/entities/game_entity.dart';
 import 'package:game_board_scores/features/home/domain/home_repository.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:collection/collection.dart';
 
 class HomeViewModel extends ViewModel with StateMixin<dynamic> {
   HomeViewModel(
@@ -24,11 +27,13 @@ class HomeViewModel extends ViewModel with StateMixin<dynamic> {
   RxBool isConnected = true.obs;
   String detailTitle = '';
   String? token;
+  TextEditingController controllerNumOfPlayer = TextEditingController();
   TextEditingController controller1 = TextEditingController();
   TextEditingController controller2 = TextEditingController();
   TextEditingController controller3 = TextEditingController();
   TextEditingController controller4 = TextEditingController();
   TextEditingController controller5 = TextEditingController();
+  RxList<TextEditingController> controllerList = <TextEditingController>[].obs;
 
   List<HomeGameEntity> listOfGame = <HomeGameEntity>[
     HomeGameEntity(
@@ -71,7 +76,7 @@ class HomeViewModel extends ViewModel with StateMixin<dynamic> {
 
   void goToFirstPlayer({required bool isFirstPlayer}) {
     if (isFirstPlayer) {
-      Get.toNamed(Routes.selectPlayers);
+      showNumOfPlayersDialog();
     }
   }
 
@@ -79,6 +84,46 @@ class HomeViewModel extends ViewModel with StateMixin<dynamic> {
     if (id == 2) {
       goToFirstPlayer(isFirstPlayer: true);
     }
+  }
+
+  Future<void> showNumOfPlayersDialog() async {
+    await Get.defaultDialog(
+      title: 'Inserisci il numero di giocatori (max 5)',
+      content: Column(
+        children: <Widget>[
+          AppTextField(
+            width: Get.width * 0.9,
+            isAutoCorrection: false,
+            hint: 'Inserisci il numero di giocatori',
+            controller: controllerNumOfPlayer,
+            textInputAction: TextInputAction.next,
+            textInputType: TextInputType.text,
+          ),
+          TextButton(
+            onPressed: addPlayersController,
+            child: Container(
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(20),
+                ),
+                color: AppColors.primary,
+              ),
+              child: const Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Text(
+                  'Aggiungi',
+                  style: TextStyle(
+                    fontSize: 15,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   void randomlySelectFirstPlayer() {
@@ -124,5 +169,22 @@ class HomeViewModel extends ViewModel with StateMixin<dynamic> {
         ],
       ),
     );
+  }
+
+  void addPlayersController() {
+    final List<TextEditingController> controllerList2 = <TextEditingController>[
+      controller1,
+      controller2,
+      controller3,
+      controller4,
+      controller5,
+    ];
+
+    final Iterable<List<TextEditingController>> x =
+        controllerList2.slices(int.parse(controllerNumOfPlayer.text),);
+    controllerList.value = x.first;
+
+    Get.toNamed(Routes.selectPlayers);
+
   }
 }
