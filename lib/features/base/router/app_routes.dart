@@ -27,7 +27,10 @@ abstract class Routes {
 
   static const String selectPlayers = '/selectPlayers';
 
+  //sushi go
   static const String sushiGo = '/sushiGo';
+  static const String sushiGoPlayers = '/sushiGoPlayers';
+  static const String sushiGoTotals = '/sushiGoTotals';
 
 
 }

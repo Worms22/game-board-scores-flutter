@@ -4,6 +4,7 @@ import 'package:game_board_scores/features/home/data/data_sources/home_remote_da
 import 'package:game_board_scores/features/home/data/home_repository_impl.dart';
 import 'package:game_board_scores/features/home/domain/home_repository.dart';
 import 'package:game_board_scores/features/home/presentation/view_models/home_view_model.dart';
+import 'package:game_board_scores/features/sushi_go/presentation/view_models/sushi_go_view_model.dart';
 import 'package:get/get.dart';
 
 
@@ -18,12 +19,10 @@ class SushiGoBinding extends Binding {
         Get.find<HomeRemoteDataSource>(),
       ),
     );
-
+*/
     Get.lazyPut(
-          () => HomeViewModel(
-        Get.find<HomeRepository>(),
-      ),
+          SushiGoViewModel.new,
     );
-    */
+
   }
 }

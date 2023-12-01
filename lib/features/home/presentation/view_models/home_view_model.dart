@@ -71,7 +71,7 @@ class HomeViewModel extends ViewModel with StateMixin<dynamic> {
   }
 
   void goToSushiGo() {
-    Get.toNamed(Routes.sushiGo);
+    Get.toNamed(Routes.sushiGoPlayers);
   }
 
   void goToFirstPlayer({required bool isFirstPlayer}) {
@@ -81,8 +81,13 @@ class HomeViewModel extends ViewModel with StateMixin<dynamic> {
   }
 
   void selectAction(int id) {
-    if (id == 2) {
-      goToFirstPlayer(isFirstPlayer: true);
+    switch(id){
+      case 1:
+        goToSushiGo();
+        break;
+      case 2:
+        goToFirstPlayer(isFirstPlayer: true);
+        break;
     }
   }
 

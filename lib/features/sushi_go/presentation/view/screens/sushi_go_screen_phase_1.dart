@@ -8,24 +8,31 @@ class SushiGoScreenPhase1 extends Screen<HomeViewModel> {
 
   @override
   Widget builder() {
-    return viewModel.obx(
-          (_) => !viewModel.isConnected.value
-          ? Container()
-          : Scaffold(
-        backgroundColor: Colors.white,
-        body: ListView(
-          children: <Widget>[
-            SizedBox(
-              height: Get.height * 0.3,
+    return viewModel.obx((_) => !viewModel.isConnected.value
+        ? Container()
+        : DefaultTabController(
+            length: 3,
+            child: Scaffold(
+              backgroundColor: Colors.white,
+              appBar: AppBar(
+                bottom: const TabBar(
+                  tabs: [
+                    Tab(text: 'Fase 1',),
+                    Tab(text: 'Fase 2',),
+                    Tab(text: 'Fase 3',),
+                  ],
+                ),
+                title: Text('Fasi di gioco'),
+              ),
+              body: const TabBarView(
+                children: <Widget>[
+                  Icon(Icons.flight, size: 350),
+                  Icon(Icons.directions_transit, size: 350),
+                  Icon(Icons.directions_car, size: 350),
+                ],
+              ),
             ),
-            const Center(child: Text('Home')),
-            SizedBox(
-              height: Get.height * 0.3,
-            ),
-
-          ],
-        ),
-      ),
+          ),
     );
   }
 }

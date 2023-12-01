@@ -12,6 +12,8 @@ import 'package:game_board_scores/features/signup/presentation/view/pages/signup
 import 'package:game_board_scores/features/splashscreen/presentation/view/page/splash_page.dart';
 import 'package:game_board_scores/features/startpage/presentation/view/pages/start_page.dart';
 import 'package:game_board_scores/features/sushi_go/presentation/view/pages/sushi_page.dart';
+import 'package:game_board_scores/features/sushi_go/presentation/view/pages/sushi_players_page.dart';
+import 'package:game_board_scores/features/sushi_go/presentation/view/pages/sushi_totals_page.dart';
 
 abstract class AppRouter {
   static const String initial = Routes.splash;
@@ -32,6 +34,8 @@ abstract class AppRouter {
       ChangePasswordPage(),
       SelectPlayerPage(),
       SushiGoPage(),
+      SushiGoPlayersPage(),
+      SushiGoTotalPage(),
     ];
   }
 }
