@@ -30,10 +30,42 @@ class SushiGoViewModel extends ViewModel with StateMixin<dynamic> {
   TextEditingController controller3 = TextEditingController();
   TextEditingController controller4 = TextEditingController();
   TextEditingController controller5 = TextEditingController();
+
+  TextEditingController controller1Step1 = TextEditingController();
+  TextEditingController controller2Step1 = TextEditingController();
+  TextEditingController controller3Step1 = TextEditingController();
+  TextEditingController controller4Step1 = TextEditingController();
+  TextEditingController controller5Step1 = TextEditingController();
+
+  TextEditingController controller1Step2 = TextEditingController();
+  TextEditingController controller2Step2 = TextEditingController();
+  TextEditingController controller3Step2 = TextEditingController();
+  TextEditingController controller4Step2 = TextEditingController();
+  TextEditingController controller5Step2 = TextEditingController();
+
+  TextEditingController controller1Step3 = TextEditingController();
+  TextEditingController controller2Step3 = TextEditingController();
+  TextEditingController controller3Step3 = TextEditingController();
+  TextEditingController controller4Step3 = TextEditingController();
+  TextEditingController controller5Step3 = TextEditingController();
+
   RxList<TextEditingController> controllerList = <TextEditingController>[].obs;
+  RxList<TextEditingController> controllerListStep1 =
+      <TextEditingController>[].obs;
+  RxList<TextEditingController> controllerListStep2 =
+      <TextEditingController>[].obs;
+  RxList<TextEditingController> controllerListStep3 =
+      <TextEditingController>[].obs;
+
+  int total1 = 0;
+  int total2 = 0;
+  int total3 = 0;
+  int total4 = 0;
+  int total5 = 0;
 
   @override
   Future<void> onReady() async {
+    setPointsControllers();
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     final String email = prefs.getString('email') ?? '';
     token = prefs.getString('jwt_token');
@@ -109,5 +141,34 @@ class SushiGoViewModel extends ViewModel with StateMixin<dynamic> {
     );
     controllerList.value = x.first;
     Get.back();
+  }
+
+  void setPointsControllers() {
+    final List<TextEditingController> controllerListStep1 =
+        <TextEditingController>[
+      controller5Step1,
+      controller5Step1,
+      controller5Step1,
+      controller5Step1,
+      controller5Step1,
+    ];
+
+    final List<TextEditingController> controllerListStep2 =
+        <TextEditingController>[
+      controller5Step2,
+      controller5Step2,
+      controller5Step2,
+      controller5Step2,
+      controller5Step2,
+    ];
+
+    final List<TextEditingController> controllerListStep3 =
+        <TextEditingController>[
+      controller5Step3,
+      controller5Step3,
+      controller5Step3,
+      controller5Step3,
+      controller5Step3,
+    ];
   }
 }
