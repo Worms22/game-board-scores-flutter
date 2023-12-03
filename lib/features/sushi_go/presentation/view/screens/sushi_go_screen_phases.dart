@@ -1,11 +1,13 @@
 import 'package:crow/crow.dart';
 import 'package:flutter/material.dart';
+import 'package:game_board_scores/features/base/widgets/app_button.dart';
 import 'package:game_board_scores/features/sushi_go/presentation/view/widgets/sushi_go_grid.dart';
 import 'package:game_board_scores/features/sushi_go/presentation/view_models/sushi_go_view_model.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class SushiGoScreenPhase1 extends Screen<SushiGoViewModel> {
-  SushiGoScreenPhase1({super.key});
+class SushiGoScreenPhases extends Screen<SushiGoViewModel> {
+  SushiGoScreenPhases({super.key});
 
   @override
   Widget builder() {
@@ -13,12 +15,12 @@ class SushiGoScreenPhase1 extends Screen<SushiGoViewModel> {
       (_) => !viewModel.isConnected.value
           ? Container()
           : DefaultTabController(
-              length: 3,
+              length: 4,
               child: Scaffold(
                 backgroundColor: Colors.white,
                 appBar: AppBar(
                   bottom: const TabBar(
-                    tabs: [
+                    tabs: <Widget>[
                       Tab(
                         text: 'Fase 1',
                       ),
@@ -27,6 +29,9 @@ class SushiGoScreenPhase1 extends Screen<SushiGoViewModel> {
                       ),
                       Tab(
                         text: 'Fase 3',
+                      ),
+                      Tab(
+                        text: 'Pudding',
                       ),
                     ],
                   ),
@@ -48,6 +53,27 @@ class SushiGoScreenPhase1 extends Screen<SushiGoViewModel> {
                       numberPhase: 3,
                       nameControllerList: viewModel.controllerList,
                       pointsControllerList: viewModel.controllerListStep3,
+                    ),
+                    Column(
+                      children: <Widget>[
+                        sushiGoGrid(
+                          numberPhase: 4,
+                          nameControllerList: viewModel.controllerList,
+                          pointsControllerList: viewModel.controllerListPudding,
+                        ),
+                        AppButton(
+                          isFill: true,
+                          isDisabled: false,
+                          width: Get.width * 0.8,
+                          textStyle: GoogleFonts.montserrat(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                          ),
+                          onTap: viewModel.goToTotalsPage,
+                          label: 'Avanti',
+                        ),
+                      ],
                     ),
                   ],
                 ),

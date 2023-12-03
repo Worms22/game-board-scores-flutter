@@ -11,12 +11,20 @@ Widget sushiGoGrid({
 }) {
   return Column(
     children: <Widget>[
-      Text(
-        'Punti della fase $numberPhase',
-        style: GoogleFonts.montserrat(
-          fontSize: 14,
-          fontWeight: FontWeight.w500,
-          color: AppColors.black,
+      Padding(
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+        child: Row(
+          children: <Widget>[
+            Text(
+              'Punti della fase $numberPhase',
+              style: GoogleFonts.montserrat(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+                color: AppColors.black,
+              ),
+            ),
+            const Spacer(),
+          ],
         ),
       ),
       for (var i = 0; i < nameControllerList.length; i++)

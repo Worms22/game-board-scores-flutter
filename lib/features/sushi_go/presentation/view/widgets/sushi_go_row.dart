@@ -9,9 +9,9 @@ Widget sushiGoRow({
   required TextEditingController controller,
 }) {
   return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+    padding: EdgeInsets.symmetric(horizontal: 16, vertical: Get.height *0.02),
     child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: <Widget>[
         Text(
           name,
@@ -22,7 +22,7 @@ Widget sushiGoRow({
           ),
         ),
         AppTextField(
-          width: Get.width * 0.7,
+          width: Get.width * 0.2,
           isAutoCorrection: false,
           hint: 'Inserisci il punteggio della fase',
           controller: controller,

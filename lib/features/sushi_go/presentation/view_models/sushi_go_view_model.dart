@@ -12,6 +12,7 @@ import 'package:game_board_scores/features/base/widgets/app_text_field.dart';
 import 'package:game_board_scores/features/home/domain/entities/game_entity.dart';
 import 'package:game_board_scores/features/home/domain/home_repository.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:collection/collection.dart';
 
@@ -49,6 +50,12 @@ class SushiGoViewModel extends ViewModel with StateMixin<dynamic> {
   TextEditingController controller4Step3 = TextEditingController();
   TextEditingController controller5Step3 = TextEditingController();
 
+  TextEditingController controller1Pudding = TextEditingController();
+  TextEditingController controller2Pudding = TextEditingController();
+  TextEditingController controller3Pudding = TextEditingController();
+  TextEditingController controller4Pudding = TextEditingController();
+  TextEditingController controller5Pudding = TextEditingController();
+
   RxList<TextEditingController> controllerList = <TextEditingController>[].obs;
   RxList<TextEditingController> controllerListStep1 =
       <TextEditingController>[].obs;
@@ -56,6 +63,10 @@ class SushiGoViewModel extends ViewModel with StateMixin<dynamic> {
       <TextEditingController>[].obs;
   RxList<TextEditingController> controllerListStep3 =
       <TextEditingController>[].obs;
+  RxList<TextEditingController> controllerListPudding =
+      <TextEditingController>[].obs;
+
+  List<int> totalList = <int>[];
 
   int total1 = 0;
   int total2 = 0;
@@ -85,6 +96,102 @@ class SushiGoViewModel extends ViewModel with StateMixin<dynamic> {
 
   void goToSushiGo() {
     Get.toNamed(Routes.sushiGoPlayers);
+  }
+
+  void addPlayersController() {
+    final List<TextEditingController> controllerList2 = <TextEditingController>[
+      controller1,
+      controller2,
+      controller3,
+      controller4,
+      controller5,
+    ];
+
+    final Iterable<List<TextEditingController>> x = controllerList2.slices(
+      int.parse(controllerNumOfPlayer.text),
+    );
+    controllerList.value = x.first;
+    Get.back();
+  }
+
+  void setPointsControllers() {
+    controllerListStep1.value = <TextEditingController>[
+      controller1Step1,
+      controller2Step1,
+      controller3Step1,
+      controller4Step1,
+      controller5Step1,
+    ];
+
+    controllerListStep2.value = <TextEditingController>[
+      controller1Step2,
+      controller2Step2,
+      controller3Step2,
+      controller4Step2,
+      controller5Step2,
+    ];
+
+    controllerListStep3.value = <TextEditingController>[
+      controller1Step3,
+      controller2Step3,
+      controller3Step3,
+      controller4Step3,
+      controller5Step3,
+    ];
+
+    controllerListPudding.value = <TextEditingController>[
+      controller1Pudding,
+      controller2Pudding,
+      controller3Pudding,
+      controller4Pudding,
+      controller5Pudding,
+    ];
+
+    totalList = <int>[
+      total1,
+      total2,
+      total3,
+      total4,
+      total5,
+    ];
+  }
+
+  void countPuddingPoints() {
+    final List<int> listOfPoints = <int>[];
+    for (int i = 0; i < controllerList.length; i++) {
+      if (controllerList[i].text != '') {
+        listOfPoints.add(int.parse(controllerListPudding[i].text));
+      }
+    }
+    listOfPoints.toSet().toList().sort();
+
+    if (listOfPoints.first != listOfPoints.last) {
+      for (int i = 0; i < controllerList.length; i++) {
+        if (int.parse(controllerListPudding[i].value.text) ==
+            listOfPoints.first) {
+          totalList[i] = totalList[i] + 6;
+        }
+        if (int.parse(controllerListPudding[i].value.text) ==
+            listOfPoints.last) {
+          totalList[i] = totalList[i] - 6;
+        }
+      }
+    }
+  }
+
+  void calculate() {
+    for (int i = 0; i < controllerList.length; i++) {
+      totalList[i] = totalList[i] +
+          int.parse(controllerListStep1[i].value.text) +
+          int.parse(controllerListStep2[i].value.text) +
+          int.parse(controllerListStep3[i].value.text);
+    }
+  }
+
+  void goToTotalsPage(){
+    countPuddingPoints();
+    calculate();
+    Get.toNamed(Routes.sushiGoTotals);
   }
 
   Future<void> showNumOfPlayersDialog() async {
@@ -125,50 +232,5 @@ class SushiGoViewModel extends ViewModel with StateMixin<dynamic> {
         ],
       ),
     );
-  }
-
-  void addPlayersController() {
-    final List<TextEditingController> controllerList2 = <TextEditingController>[
-      controller1,
-      controller2,
-      controller3,
-      controller4,
-      controller5,
-    ];
-
-    final Iterable<List<TextEditingController>> x = controllerList2.slices(
-      int.parse(controllerNumOfPlayer.text),
-    );
-    controllerList.value = x.first;
-    Get.back();
-  }
-
-  void setPointsControllers() {
-    final List<TextEditingController> controllerListStep1 =
-        <TextEditingController>[
-      controller5Step1,
-      controller5Step1,
-      controller5Step1,
-      controller5Step1,
-      controller5Step1,
-    ];
-
-    final List<TextEditingController> controllerListStep2 =
-        <TextEditingController>[
-      controller5Step2,
-      controller5Step2,
-      controller5Step2,
-      controller5Step2,
-      controller5Step2,
-    ];
-
-    final List<TextEditingController> controllerListStep3 =
-        <TextEditingController>[
-      controller5Step3,
-      controller5Step3,
-      controller5Step3,
-      controller5Step3,
-      controller5Step3,
-    ];
   }
 }

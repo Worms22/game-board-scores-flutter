@@ -5,7 +5,7 @@ import 'package:game_board_scores/features/startpage/presentation/view/screens/s
 import 'package:game_board_scores/features/sushi_go/bindings/sushi_go_bindings.dart';
 import 'package:game_board_scores/features/sushi_go/presentation/view/screens/sushi_go_players_screen.dart';
 
-import 'package:game_board_scores/features/sushi_go/presentation/view/screens/sushi_go_screen_phase_1.dart';
+import 'package:game_board_scores/features/sushi_go/presentation/view/screens/sushi_go_screen_phases.dart';
 
 class SushiGoPlayersPage extends Page<dynamic> {
   SushiGoPlayersPage()
