@@ -3,7 +3,6 @@ import 'dart:math';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:crow/crow.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:game_board_scores/features/base/router/app_routes.dart';
 import 'package:game_board_scores/features/base/utils/namespaces/app_colors.dart';
@@ -75,6 +74,9 @@ class SushiGoViewModel extends ViewModel with StateMixin<dynamic> {
   int total3 = 0;
   int total4 = 0;
   int total5 = 0;
+
+
+  String winner = '';
 
   @override
   Future<void> onReady() async {
@@ -166,7 +168,7 @@ class SushiGoViewModel extends ViewModel with StateMixin<dynamic> {
       }
     }
     listOfPoints.sort();
-    
+
     if (listOfPoints.first != listOfPoints.last) {
       for (int i = 0; i < controllerList.length; i++) {
         if (int.parse(controllerListPudding[i].value.text) ==
@@ -202,7 +204,23 @@ class SushiGoViewModel extends ViewModel with StateMixin<dynamic> {
         ),
       );
     }
+
+    resultList.sortBy<String>((SushiResultRowEntity person) => person.points);
+
+
+    if(resultList[resultList.length - 2].points == resultList.last.points){
+      winner = resultList.last.name + ' e ' + resultList[resultList.length - 2].name;
+    }else{
+      winner = resultList.last.name;
+    }
+
     Get.toNamed(Routes.sushiGoTotals);
+  }
+
+  void goToHome(){
+    Get.toNamed(Routes.home);
+    Get.delete<SushiGoViewModel>();
+
   }
 
   Future<void> showNumOfPlayersDialog() async {

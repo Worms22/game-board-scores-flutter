@@ -2,9 +2,9 @@ import 'package:crow/crow.dart';
 
 class SushiResultRowEntity extends Entity {
   SushiResultRowEntity({
-    this.name,
-    this.points,
+    required this.name,
+    required this.points,
   });
-  final String? name;
-  final String? points;
+  final String name;
+  final String points;
 }

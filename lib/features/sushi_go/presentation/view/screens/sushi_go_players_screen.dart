@@ -43,6 +43,7 @@ class SushiGoPlayersScreen extends Screen<SushiGoViewModel> {
                             controllerList: viewModel.controllerList,
                             topColor: AppColors.caramel,
                             bottomColor: AppColors.puddingYellow,
+                            borderColor: Colors.transparent,
                         ),
                         SizedBox(
                           height: Get.height * 0.1,

@@ -10,6 +10,7 @@ Widget chosePlayerNameWidget({
   required List<TextEditingController> controllerList,
   Color? topColor,
   Color? bottomColor,
+  Color? borderColor,
 }) {
   return Obx(
     () => SizedBox(
@@ -21,9 +22,13 @@ Widget chosePlayerNameWidget({
             padding: const EdgeInsets.symmetric(vertical: 10.0),
             child: Container(
               decoration: BoxDecoration(
+                border: Border.all(color: AppColors.caramel),
                 color: topColor ?? AppColors.primary,
-                borderRadius: const BorderRadius.all(
-                  Radius.circular(20),
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(20),
+                  bottomLeft: Radius.circular(10),
+                  bottomRight: Radius.circular(10),
                 ),
               ),
               child: Wrap(
@@ -44,7 +49,7 @@ Widget chosePlayerNameWidget({
                     ),
                   ),
                   AppTextField(
-                    borderColor: Colors.transparent,
+                    borderColor: AppColors.caramel,
                     filledColor: bottomColor,
                     width: Get.width * 0.9,
                     isAutoCorrection: false,

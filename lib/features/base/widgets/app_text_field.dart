@@ -29,6 +29,7 @@ class AppTextField extends StatelessWidget {
     double? width,
     Color? filledColor,
     Color? borderColor,
+
   })  : _controller = controller,
         _hint = hint,
         _errorText = errorText,
@@ -86,6 +87,13 @@ class AppTextField extends StatelessWidget {
         textInputAction: _textInputAction,
         obscureText: _isObscure!,
         decoration: InputDecoration(
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10.0),
+            borderSide: BorderSide(
+              style: BorderStyle.none,
+                width: 1, color: _borderColor ?? Colors.transparent,
+            ), //<-- SEE HERE
+          ),
           filled: true,
           fillColor: _filledColor ?? Colors.white,
           labelStyle: TextStyle(
