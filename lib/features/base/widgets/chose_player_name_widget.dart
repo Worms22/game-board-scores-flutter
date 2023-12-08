@@ -6,21 +6,23 @@ import 'package:game_board_scores/features/base/widgets/app_text_field.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 
-Widget chosePlayerNameWidget(
-  List<TextEditingController> controllerList,
-) {
+Widget chosePlayerNameWidget({
+  required List<TextEditingController> controllerList,
+  Color? topColor,
+  Color? bottomColor,
+}) {
   return Obx(
     () => SizedBox(
-      height: Get.height * 0.7,
+      height: Get.height * 0.85,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: List<Widget>.generate(controllerList.length, (int index) {
           return Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0),
             child: Container(
-              decoration: const BoxDecoration(
-                color: AppColors.primary,
-                borderRadius: BorderRadius.all(
+              decoration: BoxDecoration(
+                color: topColor ?? AppColors.primary,
+                borderRadius: const BorderRadius.all(
                   Radius.circular(20),
                 ),
               ),
@@ -42,6 +44,8 @@ Widget chosePlayerNameWidget(
                     ),
                   ),
                   AppTextField(
+                    borderColor: Colors.transparent,
+                    filledColor: bottomColor,
                     width: Get.width * 0.9,
                     isAutoCorrection: false,
                     hint: 'Inserisci nome giocatore',

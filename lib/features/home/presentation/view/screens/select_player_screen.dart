@@ -25,26 +25,38 @@ class SelectPlayersScreen extends Screen<HomeViewModel> {
               body: SafeArea(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  child: Column(
+                  child: Stack(
                     children: <Widget>[
-                      chosePlayerNameWidget(viewModel.controllerList),
-                      TextButton(
-                        onPressed: () => viewModel.randomlySelectFirstPlayer(),
-                        child: Container(
-                          decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(20),
-                            ),
-                            color: AppColors.primary,
+                      ListView(
+                        children: <Widget>[
+                          chosePlayerNameWidget(
+                            controllerList: viewModel.controllerList,
                           ),
-                          child: const Padding(
-                            padding: EdgeInsets.all(15.0),
-                            child: Text(
-                              'Select Random',
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w600,
+                          SizedBox(height: Get.height * 0.3,),
+                        ],
+                      ),
+                      Positioned(
+                        bottom: 10,
+                        right: 10,
+                        left: 10,
+                        child: TextButton(
+                          onPressed: () => viewModel.randomlySelectFirstPlayer(),
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(20),
+                              ),
+                              color: AppColors.primary,
+                            ),
+                            child: const Padding(
+                              padding: EdgeInsets.all(15.0),
+                              child: Text(
+                                'Select Random',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                           ),

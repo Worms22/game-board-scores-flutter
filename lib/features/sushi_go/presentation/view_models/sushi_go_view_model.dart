@@ -165,17 +165,17 @@ class SushiGoViewModel extends ViewModel with StateMixin<dynamic> {
         listOfPoints.add(int.parse(controllerListPudding[i].text));
       }
     }
-    listOfPoints.toSet().toList().sort();
-
+    listOfPoints.sort();
+    
     if (listOfPoints.first != listOfPoints.last) {
       for (int i = 0; i < controllerList.length; i++) {
         if (int.parse(controllerListPudding[i].value.text) ==
             listOfPoints.first) {
-          totalList[i] = totalList[i] + 6;
+          totalList[i] = totalList[i] - 6;
         }
         if (int.parse(controllerListPudding[i].value.text) ==
             listOfPoints.last) {
-          totalList[i] = totalList[i] - 6;
+          totalList[i] = totalList[i] + 6;
         }
       }
     }
@@ -244,4 +244,5 @@ class SushiGoViewModel extends ViewModel with StateMixin<dynamic> {
       ),
     );
   }
+
 }

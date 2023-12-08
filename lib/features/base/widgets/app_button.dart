@@ -12,6 +12,7 @@ class AppButton extends StatelessWidget {
     this.isDisabled = true,
     this.isFill = false,
     this.color = AppColors.primary,
+    this.borderColor = AppColors.primary,
     super.key,
   });
 
@@ -22,6 +23,7 @@ class AppButton extends StatelessWidget {
   final double? width;
   final TextStyle? textStyle;
   final Color? color;
+  final Color? borderColor;
   final bool isDisabled;
 
   @override
@@ -36,6 +38,10 @@ class AppButton extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
+            side: BorderSide(
+              color: borderColor ?? Colors.transparent,
+              width: 3,
+            )
         )
             : ElevatedButton.styleFrom(
           surfaceTintColor: AppColors.white,

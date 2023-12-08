@@ -7,7 +7,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class AppTextField extends StatelessWidget {
-   AppTextField({
+  AppTextField({
     super.key,
     TextEditingController? controller,
     String? hint,
@@ -27,6 +27,8 @@ class AppTextField extends StatelessWidget {
     bool? isClearSuffix = false,
     bool? isAutoCorrection = true,
     double? width,
+    Color? filledColor,
+    Color? borderColor,
   })  : _controller = controller,
         _hint = hint,
         _errorText = errorText,
@@ -44,7 +46,9 @@ class AppTextField extends StatelessWidget {
         _suffixCallBack = suffixCallBack,
         _isClearSuffix = isClearSuffix,
         _isAutoCorrection = isAutoCorrection,
-        _width = width;
+        _width = width,
+        _filledColor = filledColor,
+        _borderColor = borderColor;
 
   final TextEditingController? _controller;
   final String? _hint;
@@ -64,7 +68,8 @@ class AppTextField extends StatelessWidget {
   final bool? _isClearSuffix;
   final bool? _isAutoCorrection;
   final double? _width;
-
+  final Color? _filledColor;
+  final Color? _borderColor;
 
   @override
   Widget build(BuildContext context) {
@@ -82,58 +87,60 @@ class AppTextField extends StatelessWidget {
         obscureText: _isObscure!,
         decoration: InputDecoration(
           filled: true,
-          fillColor: Colors.white,
+          fillColor: _filledColor ?? Colors.white,
           labelStyle: TextStyle(
-            color: _isError! == true
-                ? AppColors.errorTextColor
-                : AppColors.black,
+            color:
+                _isError! == true ? AppColors.errorTextColor : AppColors.black,
             fontSize: FontSize.fontSizeS13,
             fontFamily:
-            _isError! == true ? Fonts.petitaBold : Fonts.petitaMedium,
+                _isError! == true ? Fonts.petitaBold : Fonts.petitaMedium,
           ),
           hintText: _hint,
           labelText: _labelText,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10.0),
+              borderSide: BorderSide(
+                color: _borderColor ?? Colors.transparent,
+              ),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10.0),
             borderSide: BorderSide(
               color: _isError! == true
                   ? AppColors.errorTextColor
-                  : AppColors.black,
+                  : _borderColor ?? Colors.transparent,
             ),
           ),
           focusedErrorBorder: _isError! == true
               ? const OutlineInputBorder(
-            borderSide:
-            BorderSide(color: AppColors.errorTextColor, width: 2),
-          )
+                  borderSide:
+                      BorderSide(color: AppColors.errorTextColor, width: 2),
+                )
               : null,
           errorText: _isError! == true ? _errorText : null,
           suffixIconColor: _suffixIconColor,
           suffixIcon: _isSuffix! && _isClearSuffix!
               ? GestureDetector(
-            behavior: HitTestBehavior.translucent,
-            onTap: _suffixCallBack,
-            child: const Icon(
-              Icons.clear,
-              color: AppColors.errorTextColor,
-            ),
-          )
+                  behavior: HitTestBehavior.translucent,
+                  onTap: _suffixCallBack,
+                  child: const Icon(
+                    Icons.clear,
+                    color: AppColors.errorTextColor,
+                  ),
+                )
               : _isSuffix!
-              ? GestureDetector(
-            behavior: HitTestBehavior.translucent,
-            onTap: _suffixCallBack,
-            child: customSvgAsset(
-              svgImage: _suffixIcon,
-              height: 5,
-              width: 5,
-              fit: BoxFit.scaleDown,
-              color: _suffixIconColor,
-            ),
-          )
-              : null,
+                  ? GestureDetector(
+                      behavior: HitTestBehavior.translucent,
+                      onTap: _suffixCallBack,
+                      child: customSvgAsset(
+                        svgImage: _suffixIcon,
+                        height: 5,
+                        width: 5,
+                        fit: BoxFit.scaleDown,
+                        color: _suffixIconColor,
+                      ),
+                    )
+                  : null,
         ),
         style: AppStyles.textStyleExtraLarge.copyWith(
           color: AppColors.lightBlack,

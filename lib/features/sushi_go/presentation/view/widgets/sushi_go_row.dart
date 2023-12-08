@@ -9,20 +9,20 @@ Widget sushiGoRow({
   required TextEditingController controller,
 }) {
   return Padding(
-    padding: EdgeInsets.symmetric(horizontal: 16, vertical: Get.height *0.02),
+    padding: EdgeInsets.symmetric(horizontal: 25, vertical: Get.height *0.02),
     child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Text(
           name,
           style: GoogleFonts.montserrat(
-            fontSize: 14,
-            fontWeight: FontWeight.w500,
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
             color: AppColors.black,
           ),
         ),
         AppTextField(
-          width: Get.width * 0.2,
+          width: Get.width * 0.3,
           isAutoCorrection: false,
           hint: 'Inserisci il punteggio della fase',
           controller: controller,
