@@ -4,6 +4,7 @@ import 'package:game_board_scores/features/base/extensions/localizations_extensi
 import 'package:game_board_scores/features/base/router/app_routes.dart';
 import 'package:game_board_scores/features/base/widgets/app_button.dart';
 import 'package:game_board_scores/features/base/widgets/chose_player_name_widget.dart';
+import 'package:game_board_scores/features/sushi_go/presentation/view/widgets/sushi_go_result_list.dart';
 import 'package:game_board_scores/features/sushi_go/presentation/view_models/sushi_go_view_model.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -35,7 +36,7 @@ class SushiGoTotalsScreen extends Screen<SushiGoViewModel> {
               SizedBox(
                 height: Get.height * 0.01,
               ),
-              chosePlayerNameWidget(viewModel.controllerList),
+              sushiGoResultList(viewModel.resultList),
               AppButton(
                 isFill: true,
                 isDisabled: false,

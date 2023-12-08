@@ -11,6 +11,7 @@ import 'package:game_board_scores/features/base/utils/namespaces/images.dart';
 import 'package:game_board_scores/features/base/widgets/app_text_field.dart';
 import 'package:game_board_scores/features/home/domain/entities/game_entity.dart';
 import 'package:game_board_scores/features/home/domain/home_repository.dart';
+import 'package:game_board_scores/features/sushi_go/domain/result_row_entity.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -67,6 +68,7 @@ class SushiGoViewModel extends ViewModel with StateMixin<dynamic> {
       <TextEditingController>[].obs;
 
   List<int> totalList = <int>[];
+  List<SushiResultRowEntity> resultList = <SushiResultRowEntity>[];
 
   int total1 = 0;
   int total2 = 0;
@@ -188,9 +190,18 @@ class SushiGoViewModel extends ViewModel with StateMixin<dynamic> {
     }
   }
 
-  void goToTotalsPage(){
+  void goToTotalsPage() {
     countPuddingPoints();
     calculate();
+    resultList = <SushiResultRowEntity>[];
+    for (int i = 0; i < controllerList.length; i++) {
+      resultList.add(
+        SushiResultRowEntity(
+          name: controllerList[i].text,
+          points: totalList[i].toString(),
+        ),
+      );
+    }
     Get.toNamed(Routes.sushiGoTotals);
   }
 
