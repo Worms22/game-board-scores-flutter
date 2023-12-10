@@ -21,6 +21,7 @@ extension Images on Never {
 
   //games
   static const String sushiGo = 'assets/images/sushi-go.jpg';
+  static const String sevenWonders = 'assets/images/7-wonders-image.png';
   static const String selectPlayer = 'assets/images/spin-wheel.png';
   static const String firstPlayerImage = 'assets/images/dadi.png';
 

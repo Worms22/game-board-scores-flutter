@@ -7,6 +7,9 @@ import 'package:game_board_scores/features/main_structure/presentation/page/main
 import 'package:game_board_scores/features/profile/presentation/view/pages/change_password_page.dart';
 import 'package:game_board_scores/features/profile/presentation/view/pages/profile_page.dart';
 import 'package:game_board_scores/features/saved/presentation/view/pages/saved_page.dart';
+import 'package:game_board_scores/features/seven_wonders/presentation/view/pages/seven_wonders_page.dart';
+import 'package:game_board_scores/features/seven_wonders/presentation/view/pages/seven_wonders_players_page.dart';
+import 'package:game_board_scores/features/seven_wonders/presentation/view/pages/seven_wonders_totals_page.dart';
 import 'package:game_board_scores/features/signup/presentation/view/pages/signup_page.dart';
 import 'package:game_board_scores/features/signup/presentation/view/pages/signup_page_step2.dart';
 import 'package:game_board_scores/features/splashscreen/presentation/view/page/splash_page.dart';
@@ -36,6 +39,9 @@ abstract class AppRouter {
       SushiGoPage(),
       SushiGoPlayersPage(),
       SushiGoTotalPage(),
+      SevenWondersPage(),
+      SevenWondersPlayersPage(),
+      SevenWondersTotalPage(),
     ];
   }
 }

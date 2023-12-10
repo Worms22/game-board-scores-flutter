@@ -49,6 +49,13 @@ class HomeViewModel extends ViewModel with StateMixin<dynamic> {
       image: Images.selectPlayer,
       firstPlayer: true,
     ),
+    HomeGameEntity(
+      id: 3,
+      title: '7 Wonders',
+      image: Images.sevenWonders,
+      players: '2-7',
+      time: '30',
+    ),
   ];
 
   @override
@@ -74,6 +81,10 @@ class HomeViewModel extends ViewModel with StateMixin<dynamic> {
     Get.toNamed(Routes.sushiGoPlayers);
   }
 
+  void goTo7Wonders() {
+    Get.toNamed(Routes.sevenWonders);
+  }
+
   void goToFirstPlayer({required bool isFirstPlayer}) {
     if (isFirstPlayer) {
       showNumOfPlayersDialog();
@@ -87,6 +98,9 @@ class HomeViewModel extends ViewModel with StateMixin<dynamic> {
         break;
       case 2:
         goToFirstPlayer(isFirstPlayer: true);
+        break;
+      case 3:
+        goTo7Wonders();
         break;
     }
   }

@@ -2,7 +2,7 @@ import 'package:crow/crow.dart';
 import 'package:flutter/material.dart';
 import 'package:game_board_scores/features/base/utils/namespaces/app_colors.dart';
 import 'package:game_board_scores/features/base/widgets/app_button.dart';
-import 'package:game_board_scores/features/seven_wonders/presentation/view_models/sushi_go_view_model.dart';
+import 'package:game_board_scores/features/seven_wonders/presentation/view_models/seven_wonders_view_model.dart';
 import 'package:game_board_scores/features/sushi_go/presentation/view/widgets/sushi_go_grid.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,7 +16,7 @@ class SevenWondersScreenPhases extends Screen<SevenWondersViewModel> {
       (_) => !viewModel.isConnected.value
           ? Container()
           : DefaultTabController(
-              length: 4,
+              length: 8,
               child: Scaffold(
                 backgroundColor: AppColors.puddingPink,
                 appBar: AppBar(
@@ -36,6 +36,36 @@ class SevenWondersScreenPhases extends Screen<SevenWondersViewModel> {
                       Tab(
                         child: Text(
                           'Fase 2',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: AppColors.black,
+                          ),
+                        ),
+                      ),
+                      Tab(
+                        child: Text(
+                          'Fase 3',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: AppColors.black,
+                          ),
+                        ),
+                      ),
+                      Tab(
+                        child: Text(
+                          'Fase 3',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: AppColors.black,
+                          ),
+                        ),
+                      ),
+                      Tab(
+                        child: Text(
+                          'Fase 3',
                           style: GoogleFonts.montserrat(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
@@ -94,13 +124,14 @@ class SevenWondersScreenPhases extends Screen<SevenWondersViewModel> {
                       color: AppColors.sushiGoFase1,
                       child: ListView(
                         children: <Widget>[
+                          /*
                           sushiGoGrid(
                             text: 'Numero di pudding',
                             numberPhase: 4,
                             nameControllerList: viewModel.controllerList,
                             pointsControllerList: viewModel.controllerListPudding,
                             color: AppColors.sushiGoFase1,
-                          ),
+                          ),*/
                           const SizedBox(height: 10,),
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 20),

@@ -2,7 +2,7 @@ import 'package:crow/crow.dart';
 import 'package:flutter/material.dart';
 import 'package:game_board_scores/features/base/utils/namespaces/app_colors.dart';
 import 'package:game_board_scores/features/base/widgets/app_button.dart';
-import 'package:game_board_scores/features/seven_wonders/presentation/view_models/sushi_go_view_model.dart';
+import 'package:game_board_scores/features/seven_wonders/presentation/view_models/seven_wonders_view_model.dart';
 import 'package:game_board_scores/features/sushi_go/presentation/view/widgets/sushi_go_result_list.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
