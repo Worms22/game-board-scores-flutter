@@ -24,6 +24,10 @@ extension Images on Never {
   static const String sevenWonders = 'assets/images/7-wonders-image.png';
   static const String selectPlayer = 'assets/images/spin-wheel.png';
   static const String firstPlayerImage = 'assets/images/dadi.png';
+  static const String piramid = 'assets/images/piramid.png';
+  static const String coin = 'assets/images/coin.png';
+  static const String battle = 'assets/images/battle.png';
+  static const String wondersBlueIcon = 'assets/images/wondersBlue.png';
 
 
   Widget customSvgAsset({

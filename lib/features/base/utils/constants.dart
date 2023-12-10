@@ -23,3 +23,5 @@ const String termsUrl =
 const String privacyUrl = 'https://www.google.it/';
 
 const String baseUrl = 'https://www.google.it/';
+
+//Icons by Icon8

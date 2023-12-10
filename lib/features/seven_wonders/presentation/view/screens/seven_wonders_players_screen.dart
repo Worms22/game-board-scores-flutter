@@ -65,7 +65,7 @@ class SevenWondersPlayersScreen extends Screen<SevenWondersViewModel> {
                           fontWeight: FontWeight.w600,
                           color: Colors.white,
                         ),
-                        onTap: () => Get.toNamed(Routes.sushiGo),
+                        onTap: () => Get.toNamed(Routes.sevenWonders),
                         label: 'Continua',
                       ),
                     ),

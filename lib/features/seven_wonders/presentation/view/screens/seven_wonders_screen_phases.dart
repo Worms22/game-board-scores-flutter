@@ -1,6 +1,7 @@
 import 'package:crow/crow.dart';
 import 'package:flutter/material.dart';
 import 'package:game_board_scores/features/base/utils/namespaces/app_colors.dart';
+import 'package:game_board_scores/features/base/utils/namespaces/images.dart';
 import 'package:game_board_scores/features/base/widgets/app_button.dart';
 import 'package:game_board_scores/features/seven_wonders/presentation/view_models/seven_wonders_view_model.dart';
 import 'package:game_board_scores/features/sushi_go/presentation/view/widgets/sushi_go_grid.dart';
@@ -24,42 +25,30 @@ class SevenWondersScreenPhases extends Screen<SevenWondersViewModel> {
                   bottom:  TabBar(
                     tabs: <Widget>[
                       Tab(
-                        child: Text(
-                          'Fase 1',
-                          style: GoogleFonts.montserrat(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.black,
+                        icon: Image.asset(Images.piramid),
+                      ),
+                      Tab(
+                        icon: Image.asset(Images.coin),
+                      ),
+                      Tab(
+                        icon: Image.asset(Images.battle),
+                      ),
+                      Tab(
+                        child: Container(
+                          color: AppColors.wondersBlue,
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 4.0),
+                            child: Image.asset(Images.wondersBlueIcon),
                           ),
                         ),
                       ),
                       Tab(
-                        child: Text(
-                          'Fase 2',
-                          style: GoogleFonts.montserrat(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.black,
-                          ),
-                        ),
-                      ),
-                      Tab(
-                        child: Text(
-                          'Fase 3',
-                          style: GoogleFonts.montserrat(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.black,
-                          ),
-                        ),
-                      ),
-                      Tab(
-                        child: Text(
-                          'Fase 3',
-                          style: GoogleFonts.montserrat(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.black,
+                        child: Container(
+                          height: 25,
+                          color: AppColors.wondersGold,
+                          child: const Padding(
+                            padding: EdgeInsets.all(2.0),
+                            child: Center(child: Icon(Icons.circle, color: AppColors.wondersSilver, size: 10,)),
                           ),
                         ),
                       ),

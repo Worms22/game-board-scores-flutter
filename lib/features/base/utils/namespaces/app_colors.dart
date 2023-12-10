@@ -25,4 +25,8 @@ extension AppColors on Never {
   static const Color wondersBronze = Color(0xffCD7F32);
   static const Color wondersSilver = Color(0xffE6E6E6);
   static const Color wondersGold = Color(0xffFFD700);
+  static const Color wondersBlue = Color(0xff44a6c6);
+  static const Color wondersGreen = Color(0xff1ec31e);
+  static const Color wondersPurple = Color(0xff7955be);
+
 }
