@@ -82,7 +82,7 @@ class HomeViewModel extends ViewModel with StateMixin<dynamic> {
   }
 
   void goTo7Wonders() {
-    Get.toNamed(Routes.sevenWonders);
+    Get.toNamed(Routes.sevenWondersPlayers);
   }
 
   void goToFirstPlayer({required bool isFirstPlayer}) {

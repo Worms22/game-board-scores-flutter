@@ -13,57 +13,54 @@ Widget chosePlayerNameWidget({
   Color? borderColor,
 }) {
   return Obx(
-    () => SizedBox(
-      height: Get.height * 0.85,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: List<Widget>.generate(controllerList.length, (int index) {
-          return Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10.0),
-            child: Container(
-              decoration: BoxDecoration(
-                border: Border.all(color: AppColors.caramel),
-                color: topColor ?? AppColors.primary,
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
-                  bottomLeft: Radius.circular(10),
-                  bottomRight: Radius.circular(10),
-                ),
-              ),
-              child: Wrap(
-                direction: Axis.vertical,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 2,
-                      horizontal: 15,
-                    ),
-                    child: Text(
-                      'Giocatore ${index + 1}',
-                      style: const TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ),
-                  AppTextField(
-                    borderColor: AppColors.caramel,
-                    filledColor: bottomColor,
-                    width: Get.width * 0.9,
-                    isAutoCorrection: false,
-                    hint: 'Inserisci nome giocatore',
-                    controller: controllerList[index],
-                    textInputAction: TextInputAction.next,
-                    textInputType: TextInputType.text,
-                  ),
-                ],
+    () => Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: List<Widget>.generate(controllerList.length, (int index) {
+        return Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10.0),
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: AppColors.caramel),
+              color: topColor ?? AppColors.primary,
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20),
+                bottomLeft: Radius.circular(10),
+                bottomRight: Radius.circular(10),
               ),
             ),
-          );
-        }),
-      ),
+            child: Wrap(
+              direction: Axis.vertical,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 2,
+                    horizontal: 15,
+                  ),
+                  child: Text(
+                    'Giocatore ${index + 1}',
+                    style: const TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+                AppTextField(
+                  borderColor: AppColors.caramel,
+                  filledColor: bottomColor,
+                  width: Get.width * 0.9,
+                  isAutoCorrection: false,
+                  hint: 'Inserisci nome giocatore',
+                  controller: controllerList[index],
+                  textInputAction: TextInputAction.next,
+                  textInputType: TextInputType.text,
+                ),
+              ],
+            ),
+          ),
+        );
+      }),
     ),
   );
 }

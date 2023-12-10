@@ -149,6 +149,8 @@ class SevenWondersViewModel extends ViewModel with StateMixin<dynamic> {
       controller3,
       controller4,
       controller5,
+      controller6,
+      controller7,
     ];
 
     final Iterable<List<TextEditingController>> x = controllerList2.slices(

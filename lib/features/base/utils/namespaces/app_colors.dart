@@ -19,4 +19,10 @@ extension AppColors on Never {
   static const Color sushiGoFase2 = Color(0xffb4f3c0);
   static const Color sushiGoFase3 = Color(0xffe9cff7);
   static const Color sushiGoFase4 = Color(0xff99c6f0);
+
+  //7 Wonders
+  static const Color wondersSand = Color(0xfffaebd7);
+  static const Color wondersBronze = Color(0xffCD7F32);
+  static const Color wondersSilver = Color(0xffE6E6E6);
+  static const Color wondersGold = Color(0xffFFD700);
 }

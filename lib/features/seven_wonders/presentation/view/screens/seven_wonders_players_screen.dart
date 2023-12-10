@@ -18,9 +18,9 @@ class SevenWondersPlayersScreen extends Screen<SevenWondersViewModel> {
       (_) => !viewModel.isConnected.value
           ? Container()
           : Scaffold(
-              backgroundColor: AppColors.puddingPink,
+              backgroundColor: AppColors.wondersSand,
               appBar: AppBar(
-                backgroundColor: AppColors.puddingPink,
+                backgroundColor: AppColors.wondersSand,
                 title: const Text(
                   'Aggiungere i giocatori: ',
                   style: TextStyle(
@@ -41,12 +41,12 @@ class SevenWondersPlayersScreen extends Screen<SevenWondersViewModel> {
                         ),
                         chosePlayerNameWidget(
                             controllerList: viewModel.controllerList,
-                            topColor: AppColors.caramel,
-                            bottomColor: AppColors.puddingYellow,
+                            topColor: AppColors.wondersBronze,
+                            bottomColor: AppColors.wondersSilver,
                             borderColor: Colors.transparent,
                         ),
                         SizedBox(
-                          height: Get.height * 0.1,
+                          height: Get.height * 0.5,
                         ),
                       ],
                     ),
@@ -55,8 +55,8 @@ class SevenWondersPlayersScreen extends Screen<SevenWondersViewModel> {
                       left: 20,
                       right: 20,
                       child: AppButton(
-                        color: AppColors.sushiGoPrimary,
-                        borderColor: Colors.purple[200],
+                        color: AppColors.wondersGold,
+                        borderColor: AppColors.wondersGold,
                         isFill: true,
                         isDisabled: false,
                         width: Get.width * 0.8,

@@ -6,7 +6,7 @@ import 'package:game_board_scores/features/seven_wonders/presentation/view/scree
 class SevenWondersPlayersPage extends Page<dynamic> {
   SevenWondersPlayersPage()
       : super(
-    name: Routes.sushiGoPlayers,
+    name: Routes.sevenWondersPlayers,
     view: SevenWondersPlayersScreen.new,
     binding: SevenWondersBinding(),
   );
