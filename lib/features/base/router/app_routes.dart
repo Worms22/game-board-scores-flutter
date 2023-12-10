@@ -32,6 +32,10 @@ abstract class Routes {
   static const String sushiGoPlayers = '/sushiGoPlayers';
   static const String sushiGoTotals = '/sushiGoTotals';
 
+  //seven wonders
+  static const String sevenWonders = '/sevenWonders';
+  static const String sevenWondersPlayers = '/sevenWondersPlayers';
+  static const String sevenWondersTotals = '/sevenWondersTotals';
 
 }
 
