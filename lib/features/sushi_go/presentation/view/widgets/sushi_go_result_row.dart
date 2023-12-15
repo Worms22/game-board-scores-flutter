@@ -5,12 +5,12 @@ import 'package:google_fonts/google_fonts.dart';
 
 Widget sushiGoResultRow({required String name, required String points}){
   return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 5),
+    padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
     child: Container(
       decoration: BoxDecoration(
         color: AppColors.sushiGoFase4,
         borderRadius: BorderRadius.circular(15),
-        border: Border.all(color: Colors.blue, width: 5,)
+        border: Border.all(color: Colors.blue, width: 5,),
       ),
       child: Padding(
         padding: const EdgeInsets.all(8.0),

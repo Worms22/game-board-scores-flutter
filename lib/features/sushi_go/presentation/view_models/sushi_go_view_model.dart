@@ -200,13 +200,12 @@ class SushiGoViewModel extends ViewModel with StateMixin<dynamic> {
       resultList.add(
         SushiResultRowEntity(
           name: controllerList[i].text,
-          points: totalList[i].toString(),
+          points: totalList[i],
         ),
       );
     }
 
-    resultList.sortBy<String>((SushiResultRowEntity person) => person.points);
-
+    resultList.sort((SushiResultRowEntity a, SushiResultRowEntity b) => a.points.compareTo(b.points));
 
     if(resultList[resultList.length - 2].points == resultList.last.points){
       winner = resultList.last.name + ' e ' + resultList[resultList.length - 2].name;

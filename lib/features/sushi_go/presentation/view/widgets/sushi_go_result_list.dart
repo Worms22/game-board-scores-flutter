@@ -7,7 +7,7 @@ Widget sushiGoResultList(List<SushiResultRowEntity> resultList){
     reverse: true,
     children: <Widget>[
       for(var item in resultList)
-      sushiGoResultRow( name: item.name ?? '', points: item.points ?? ''),
+      sushiGoResultRow( name: item.name ?? '', points: item.points.toString() ?? ''),
     ],
   );
 }

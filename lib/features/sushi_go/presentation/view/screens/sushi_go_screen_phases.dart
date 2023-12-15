@@ -1,6 +1,7 @@
 import 'package:crow/crow.dart';
 import 'package:flutter/material.dart';
 import 'package:game_board_scores/features/base/utils/namespaces/app_colors.dart';
+import 'package:game_board_scores/features/base/utils/namespaces/images.dart';
 import 'package:game_board_scores/features/base/widgets/app_button.dart';
 import 'package:game_board_scores/features/sushi_go/presentation/view/widgets/sushi_go_grid.dart';
 import 'package:game_board_scores/features/sushi_go/presentation/view_models/sushi_go_view_model.dart';
@@ -74,32 +75,38 @@ class SushiGoScreenPhases extends Screen<SushiGoViewModel> {
                       numberPhase: 1,
                       nameControllerList: viewModel.controllerList,
                       pointsControllerList: viewModel.controllerListStep1,
-                      color: AppColors.puddingPink,
+                      image: Images.sushiBack1,
                     ),
                     sushiGoGrid(
                       text: 'Punti della fase 2',
                       numberPhase: 2,
                       nameControllerList: viewModel.controllerList,
                       pointsControllerList: viewModel.controllerListStep2,
-                      color: AppColors.puddingPink,
+                      image: Images.sushiBack2,
                     ),
                     sushiGoGrid(
                       text: 'Punti della fase 3',
                       numberPhase: 3,
                       nameControllerList: viewModel.controllerList,
                       pointsControllerList: viewModel.controllerListStep3,
-                      color: AppColors.puddingPink,
+                      image: Images.sushiBack3,
                     ),
-                    Container(
-                      color: AppColors.sushiGoFase1,
-                      child: ListView(
+                    Stack(
+                      children: <Widget>[
+                          Center(
+                            child: Padding(
+                              padding: const EdgeInsets.all(80.0),
+                              child: Image.asset(Images.sushiBack4),
+                            ),
+                          ),
+                        ListView(
                         children: <Widget>[
                           sushiGoGrid(
                             text: 'Numero di pudding',
                             numberPhase: 4,
                             nameControllerList: viewModel.controllerList,
                             pointsControllerList: viewModel.controllerListPudding,
-                            color: AppColors.sushiGoFase1,
+                            image: null,
                           ),
                           const SizedBox(height: 10,),
                           Padding(
@@ -121,7 +128,7 @@ class SushiGoScreenPhases extends Screen<SushiGoViewModel> {
                           ),
                           const SizedBox(height: 20,),
                         ],
-                      ),
+                      )],
                     ),
                   ],
                 ),

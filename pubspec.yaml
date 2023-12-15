@@ -31,12 +31,13 @@ dependencies:
   duckma_client: ^0.0.2
   connectivity_plus: ^3.0.2
   flutter_native_splash: ^2.2.17
-  flutter_svg: ^1.1.6
+  flutter_svg: ^2.0.9
   carousel_slider: ^4.2.1
   url_launcher: ^6.1.5
   step_progress_indicator: ^1.0.2
   package_info_plus: ^4.1.0
   keycloak_flutter: ^0.0.21
+  flutter_html: ^3.0.0-beta.2
 
 
 dev_dependencies:

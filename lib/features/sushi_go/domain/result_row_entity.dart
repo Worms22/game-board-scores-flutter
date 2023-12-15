@@ -6,5 +6,5 @@ class SushiResultRowEntity extends Entity {
     required this.points,
   });
   final String name;
-  final String points;
+  final int points;
 }
