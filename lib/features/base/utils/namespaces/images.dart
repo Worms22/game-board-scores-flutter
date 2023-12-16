@@ -38,6 +38,9 @@ extension Images on Never {
   static const String coin = 'assets/images/coin.png';
   static const String battle = 'assets/images/battle.png';
   static const String wondersBlueIcon = 'assets/images/wondersBlue.png';
+  static const String babylonBack = 'assets/images/babylon.jpeg';
+  static const String piramidBack = 'assets/images/piramids.jpeg';
+  static const String colossusBack = 'assets/images/colossus.jpeg';
 
 
   Widget customSvgAsset({

@@ -233,7 +233,7 @@ class SushiGoViewModel extends ViewModel with StateMixin<dynamic> {
             hint: 'Inserisci il numero di giocatori',
             controller: controllerNumOfPlayer,
             textInputAction: TextInputAction.next,
-            textInputType: TextInputType.text,
+            textInputType: TextInputType.number,
           ),
           TextButton(
             onPressed: addPlayersController,

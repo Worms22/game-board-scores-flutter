@@ -4,14 +4,13 @@ import 'package:game_board_scores/features/base/widgets/app_text_field.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Widget sushiGoRow({
+Widget sevenWondersRow({
   required String name,
   required TextEditingController controller,
 }) {
   return Padding(
     padding: EdgeInsets.symmetric(horizontal: 25, vertical: Get.height *0.02),
     child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Text(
           name,
@@ -21,14 +20,24 @@ Widget sushiGoRow({
             color: AppColors.black,
           ),
         ),
+        const Spacer(),
         AppTextField(
-          width: Get.width * 0.3,
+          width: Get.width * 0.15,
           isAutoCorrection: false,
-          hint: 'Inserisci il punteggio della fase',
+          hint: '0',
           controller: controller,
           textInputAction: TextInputAction.next,
           textInputType: TextInputType.number,
-        )
+        ),
+        const SizedBox(width: 10,),
+        Text(
+          'punti',
+          style: GoogleFonts.montserrat(
+            fontSize: 14,
+            fontWeight: FontWeight.w400,
+            color: AppColors.black,
+          ),
+        ),
       ],
     ),
   );

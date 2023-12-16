@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:game_board_scores/features/base/utils/namespaces/app_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Widget sushiGoResultRow({required String name, required String points}){
+Widget sevenWondersResultRow({required String name, required String points}){
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 5),
     child: Container(

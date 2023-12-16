@@ -61,13 +61,37 @@ class SevenWondersViewModel extends ViewModel with StateMixin<dynamic> {
   TextEditingController controller6Step4 = TextEditingController();
   TextEditingController controller7Step4 = TextEditingController();
 
-  TextEditingController controller1Step5 = TextEditingController();
-  TextEditingController controller2Step5 = TextEditingController();
-  TextEditingController controller3Step5 = TextEditingController();
-  TextEditingController controller4Step5 = TextEditingController();
-  TextEditingController controller5Step5 = TextEditingController();
-  TextEditingController controller6Step5 = TextEditingController();
-  TextEditingController controller7Step5 = TextEditingController();
+  TextEditingController controller1Step5Symb1 = TextEditingController();
+  TextEditingController controller2Step5Symb1 = TextEditingController();
+  TextEditingController controller3Step5Symb1 = TextEditingController();
+  TextEditingController controller4Step5Symb1 = TextEditingController();
+  TextEditingController controller5Step5Symb1 = TextEditingController();
+  TextEditingController controller6Step5Symb1 = TextEditingController();
+  TextEditingController controller7Step5Symb1 = TextEditingController();
+
+  TextEditingController controller1Step5Symb2 = TextEditingController();
+  TextEditingController controller2Step5Symb2 = TextEditingController();
+  TextEditingController controller3Step5Symb2 = TextEditingController();
+  TextEditingController controller4Step5Symb2 = TextEditingController();
+  TextEditingController controller5Step5Symb2 = TextEditingController();
+  TextEditingController controller6Step5Symb2 = TextEditingController();
+  TextEditingController controller7Step5Symb2 = TextEditingController();
+
+  TextEditingController controller1Step5Symb3 = TextEditingController();
+  TextEditingController controller2Step5Symb3 = TextEditingController();
+  TextEditingController controller3Step5Symb3 = TextEditingController();
+  TextEditingController controller4Step5Symb3 = TextEditingController();
+  TextEditingController controller5Step5Symb3 = TextEditingController();
+  TextEditingController controller6Step5Symb3 = TextEditingController();
+  TextEditingController controller7Step5Symb3 = TextEditingController();
+
+  TextEditingController controller1TotalStep5 = TextEditingController();
+  TextEditingController controller2TotalStep5 = TextEditingController();
+  TextEditingController controller3TotalStep5 = TextEditingController();
+  TextEditingController controller4TotalStep5 = TextEditingController();
+  TextEditingController controller5TotalStep5 = TextEditingController();
+  TextEditingController controller6TotalStep5 = TextEditingController();
+  TextEditingController controller7TotalStep5 = TextEditingController();
 
   TextEditingController controller1Step6 = TextEditingController();
   TextEditingController controller2Step6 = TextEditingController();
@@ -85,8 +109,6 @@ class SevenWondersViewModel extends ViewModel with StateMixin<dynamic> {
   TextEditingController controller6Step7 = TextEditingController();
   TextEditingController controller7Step7 = TextEditingController();
 
-
-
   RxList<TextEditingController> controllerList = <TextEditingController>[].obs;
   RxList<TextEditingController> controllerListStep1 =
       <TextEditingController>[].obs;
@@ -96,13 +118,18 @@ class SevenWondersViewModel extends ViewModel with StateMixin<dynamic> {
       <TextEditingController>[].obs;
   RxList<TextEditingController> controllerListStep4 =
       <TextEditingController>[].obs;
-  RxList<TextEditingController> controllerListStep5 =
+  RxList<TextEditingController> controllerListStep5Symb1 =
+      <TextEditingController>[].obs;
+  RxList<TextEditingController> controllerListStep5Symb2 =
+      <TextEditingController>[].obs;
+  RxList<TextEditingController> controllerListStep5Symb3 =
+      <TextEditingController>[].obs;
+  RxList<TextEditingController> controllerTotalsListStep5 =
       <TextEditingController>[].obs;
   RxList<TextEditingController> controllerListStep6 =
       <TextEditingController>[].obs;
   RxList<TextEditingController> controllerListStep7 =
       <TextEditingController>[].obs;
-
 
   List<int> totalList = <int>[];
   List<SushiResultRowEntity> resultList = <SushiResultRowEntity>[];
@@ -114,7 +141,6 @@ class SevenWondersViewModel extends ViewModel with StateMixin<dynamic> {
   int total5 = 0;
   int total6 = 0;
   int total7 = 0;
-
 
   String winner = '';
 
@@ -201,14 +227,44 @@ class SevenWondersViewModel extends ViewModel with StateMixin<dynamic> {
       controller7Step4,
     ];
 
-    controllerListStep5.value = <TextEditingController>[
-      controller1Step5,
-      controller2Step5,
-      controller3Step5,
-      controller4Step5,
-      controller5Step5,
-      controller6Step5,
-      controller7Step5,
+    controllerListStep5Symb1.value = <TextEditingController>[
+      controller1Step5Symb1,
+      controller2Step5Symb1,
+      controller3Step5Symb1,
+      controller4Step5Symb1,
+      controller5Step5Symb1,
+      controller6Step5Symb1,
+      controller7Step5Symb1,
+    ];
+
+    controllerListStep5Symb2.value = <TextEditingController>[
+      controller1Step5Symb2,
+      controller2Step5Symb2,
+      controller3Step5Symb2,
+      controller4Step5Symb2,
+      controller5Step5Symb2,
+      controller6Step5Symb2,
+      controller7Step5Symb2,
+    ];
+
+    controllerListStep5Symb3.value = <TextEditingController>[
+      controller1Step5Symb3,
+      controller2Step5Symb3,
+      controller3Step5Symb3,
+      controller4Step5Symb3,
+      controller5Step5Symb3,
+      controller6Step5Symb3,
+      controller7Step5Symb3,
+    ];
+
+    controllerTotalsListStep5.value = <TextEditingController>[
+      controller1TotalStep5,
+      controller2TotalStep5,
+      controller3TotalStep5,
+      controller4TotalStep5,
+      controller5TotalStep5,
+      controller6TotalStep5,
+      controller7TotalStep5,
     ];
 
     controllerListStep6.value = <TextEditingController>[
@@ -231,7 +287,6 @@ class SevenWondersViewModel extends ViewModel with StateMixin<dynamic> {
       controller7Step7,
     ];
 
-
     totalList = <int>[
       total1,
       total2,
@@ -243,14 +298,67 @@ class SevenWondersViewModel extends ViewModel with StateMixin<dynamic> {
     ];
   }
 
+  int calculateScientificStructuresPointsForSinglePlayer(
+      String ssymb1, String ssymb2, String ssymb3) {
 
+    if (ssymb1 == '') {
+      ssymb1 = '0';
+    }
+    if (ssymb2 == '') {
+      ssymb2 = '0';
+    }
+    if (ssymb3 == '') {
+      ssymb3 = '0';
+    }
+
+
+    final int symb1 = int.parse(ssymb1);
+    final int symb2 = int.parse(ssymb2);
+    final int symb3 = int.parse(ssymb3);
+
+    final int totalSymb1 = symb1 * symb1;
+    final int totalSymb2 = symb2 * symb2;
+    final int totalSymb3 = symb3 * symb3;
+    int min = 100;
+    if (symb1 < min) {
+      min = symb1;
+    }
+    if (symb2 < min) {
+      min = symb2;
+    }
+    if (symb3 < min) {
+      min = symb3;
+    }
+
+    final int totalMixed = min * 7;
+
+    return totalSymb1 + totalSymb2 + totalSymb3 + totalMixed;
+  }
+
+  void calculateScientificStructuresPoints() {
+    for (int i = 0; i < controllerList.length; i++) {
+      controllerTotalsListStep5[i].text =
+          calculateScientificStructuresPointsForSinglePlayer(
+                  controllerListStep5Symb1[i].text,
+                  controllerListStep5Symb2[i].text,
+                  controllerListStep5Symb3[i].text)
+              .toString();
+      print(controllerTotalsListStep5[i].text );
+
+    }
+    update();
+  }
 
   void calculate() {
     for (int i = 0; i < controllerList.length; i++) {
       totalList[i] = totalList[i] +
           int.parse(controllerListStep1[i].value.text) +
           int.parse(controllerListStep2[i].value.text) +
-          int.parse(controllerListStep3[i].value.text);
+          int.parse(controllerListStep3[i].value.text) +
+          int.parse(controllerListStep4[i].value.text) +
+          int.parse(controllerTotalsListStep5[i].value.text) +
+          int.parse(controllerListStep6[i].value.text) +
+          int.parse(controllerListStep7[i].value.text);
     }
   }
 
@@ -266,22 +374,22 @@ class SevenWondersViewModel extends ViewModel with StateMixin<dynamic> {
       );
     }
 
-    resultList.sort((SushiResultRowEntity a, SushiResultRowEntity b) => a.points.compareTo(b.points));
+    resultList.sort((SushiResultRowEntity a, SushiResultRowEntity b) =>
+        a.points.compareTo(b.points));
 
-
-    if(resultList[resultList.length - 2].points == resultList.last.points){
-      winner = resultList.last.name + ' e ' + resultList[resultList.length - 2].name;
-    }else{
+    if (resultList[resultList.length - 2].points == resultList.last.points) {
+      winner =
+          resultList.last.name + ' e ' + resultList[resultList.length - 2].name;
+    } else {
       winner = resultList.last.name;
     }
 
-    Get.toNamed(Routes.sushiGoTotals);
+    Get.toNamed(Routes.sevenWondersTotals);
   }
 
-  void goToHome(){
+  void goToHome() {
     Get.toNamed(Routes.home);
     Get.delete<SevenWondersViewModel>();
-
   }
 
   Future<void> showNumOfPlayersDialog() async {
@@ -295,7 +403,7 @@ class SevenWondersViewModel extends ViewModel with StateMixin<dynamic> {
             hint: 'Inserisci il numero di giocatori',
             controller: controllerNumOfPlayer,
             textInputAction: TextInputAction.next,
-            textInputType: TextInputType.text,
+            textInputType: TextInputType.number,
           ),
           TextButton(
             onPressed: addPlayersController,
@@ -323,5 +431,4 @@ class SevenWondersViewModel extends ViewModel with StateMixin<dynamic> {
       ),
     );
   }
-
 }
