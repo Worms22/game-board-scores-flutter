@@ -13,7 +13,7 @@ class SplashScreen extends Screen<SplashViewModel> {
   Widget builder() {
     return viewModel.obx(
           (_) => Scaffold(
-            backgroundColor: AppColors.primary,
+            backgroundColor: AppColors.white,
             body: Center(
               child: Padding(
                 padding: const EdgeInsets.all(16),
