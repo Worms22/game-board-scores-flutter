@@ -20,7 +20,8 @@ const TextInputType kDecimalKeyboardType = TextInputType.numberWithOptions(
 
 const String termsUrl =
     'https://www.google.it/';
-const String privacyUrl = 'https://www.google.it/';
+
+const String privacyUrl = 'https://www.freeprivacypolicy.com/live/c7ed73c5-b7d9-42b0-aa01-7f80bb55708b';
 
 const String baseUrl = 'https://www.google.it/';
 

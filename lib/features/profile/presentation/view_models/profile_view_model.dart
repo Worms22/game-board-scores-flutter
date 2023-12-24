@@ -9,9 +9,11 @@ import 'package:game_board_scores/features/base/router/app_routes.dart';
 import 'package:game_board_scores/features/base/utils/password_validator.dart';
 import 'package:game_board_scores/features/profile/domain/profile_repository.dart';
 import 'package:game_board_scores/features/profile/presentation/view/widgets/be_sure_dialog.dart';
+import 'package:game_board_scores/features/profile/presentation/view/widgets/future_development.dart';
 import 'package:get/get.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
 class ProfileViewModel extends ViewModel with StateMixin<dynamic> {
@@ -181,6 +183,36 @@ class ProfileViewModel extends ViewModel with StateMixin<dynamic> {
   Future<void> savePassword() async {
     //set here all the operations to save the new password
     Get.back();
+  }
+
+  Future<void> showFutureDevelopmentDialog() async {
+    await showDialog(
+      context: context,
+      barrierDismissible: true,
+      builder: (BuildContext dialogContext) {
+        return AlertDialog(
+          title: Text('Sviluppi futuri'),
+          content: futureDevelopment(),
+        );
+
+
+      },
+    );
+  }
+
+  Future<void> newFeatureRequest()async {
+    final Uri params = Uri(
+      scheme: 'mailto',
+      path: 'nicolas.22.nv@gmail.com',
+      query: 'subject=Proposte sviluppi', //add subject and body here
+    );
+
+    var url = params.toString();
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 
 }

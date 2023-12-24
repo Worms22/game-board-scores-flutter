@@ -13,6 +13,20 @@ Widget settingSection(ProfileViewModel viewModel) {
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
+        const Divider(),
+        ListTile(
+          title: Text(
+            'Richiedi nuove funzionalità',
+            style: GoogleFonts.montserrat(
+              fontSize: 16,
+              fontWeight: FontWeight.w400,
+              color: AppColors.black,
+            ),
+          ),
+          onTap: () => viewModel.newFeatureRequest(),
+        ),
+        const Divider(),
+
         ListTile(
           title: Text(
             AppLocalizations.of(Get.context!)!.privacyPolicyProfile,
@@ -25,7 +39,7 @@ Widget settingSection(ProfileViewModel viewModel) {
           onTap: () => launchUrl(Uri.parse(privacyUrl)),
         ),
         const Divider(),
-        ListTile(
+        /*ListTile(
           title: Text(
             AppLocalizations.of(Get.context!)!.termsProfile,
             style: GoogleFonts.montserrat(
@@ -35,9 +49,9 @@ Widget settingSection(ProfileViewModel viewModel) {
             ),
           ),
           onTap: () => launchUrl(Uri.parse(termsUrl)),
-        ),
-        const Divider(),
-        ListTile(
+        ), */
+        //const Divider(),
+        /*ListTile(
           title: Text(
             AppLocalizations.of(Get.context!)!.logout,
             style: GoogleFonts.montserrat(
@@ -59,8 +73,8 @@ Widget settingSection(ProfileViewModel viewModel) {
             ),
           ),
           onTap: () => viewModel.doYouWantDelete(),
-        ),
-        const Divider(),
+        ),*/
+        //const Divider(),
         ListTile(
           title: Text(
             '${AppLocalizations.of(Get.context!)!.version}: ${viewModel.appVersion.value}',

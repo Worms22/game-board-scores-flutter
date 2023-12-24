@@ -25,7 +25,7 @@ class ProfileScreen extends Screen<ProfileViewModel> {
                   ),
                   Center(
                     child: Text(
-                      'Profile',
+                      'Settings',
                       style: GoogleFonts.montserrat(
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
@@ -36,13 +36,30 @@ class ProfileScreen extends Screen<ProfileViewModel> {
                   SizedBox(
                     height: Get.height * 0.01,
                   ),
-                  userSection(viewModel),
-                  const Center(child: Text('Custom fields')),
+                  ListTile(
+                    onTap: () => viewModel.showFutureDevelopmentDialog(),
+                    title: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Text(
+                        'Sviluppi futuri',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: AppColors.black,
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  //userSection(viewModel),
+                  //const Center(child: Text('Custom fields')),
                   settingSection(viewModel),
+
                   SizedBox(
                     height: Get.height * 0.02,
                   ),
-                  Center(
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 26.0),
                     child: Html(
                         data:
                             'Illustration by <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA">Icons 8</a> from <a href="https://icons8.com/illustrations">Ouch!</a>'),

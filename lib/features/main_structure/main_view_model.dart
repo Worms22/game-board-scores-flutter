@@ -20,7 +20,7 @@ class MainViewModel extends ViewModel with StateMixin<dynamic> {
 
   List<Widget> pages = <Widget>[
     HomeScreen(),
-    SavedScreen(),
+    //SavedScreen(),
     ProfileScreen(),
   ];
 

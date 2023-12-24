@@ -48,7 +48,7 @@ class MainScreen extends Screen<MainViewModel> {
         ),
         label: AppLocalizations.of(Get.context!)!.home,
       ),
-      BottomNavigationBarItem(
+      /*BottomNavigationBarItem(
         icon: Container(
           width: 64,
           height: 32,
@@ -64,6 +64,7 @@ class MainScreen extends Screen<MainViewModel> {
         ),
         label: AppLocalizations.of(Get.context!)!.saved,
       ),
+      */
       BottomNavigationBarItem(
         icon: Container(
           width: 64,
