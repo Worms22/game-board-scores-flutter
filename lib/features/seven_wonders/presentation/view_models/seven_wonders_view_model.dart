@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:collection/collection.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:crow/crow.dart';
+import 'package:duckma_crow_flutter/duckma_crow_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:game_board_scores/features/base/router/app_routes.dart';
 import 'package:game_board_scores/features/base/utils/namespaces/app_colors.dart';
@@ -341,7 +341,8 @@ class SevenWondersViewModel extends ViewModel with StateMixin<dynamic> {
           calculateScientificStructuresPointsForSinglePlayer(
                   controllerListStep5Symb1[i].text,
                   controllerListStep5Symb2[i].text,
-                  controllerListStep5Symb3[i].text)
+                  controllerListStep5Symb3[i].text,
+          )
               .toString();
       print(controllerTotalsListStep5[i].text );
 
@@ -352,13 +353,13 @@ class SevenWondersViewModel extends ViewModel with StateMixin<dynamic> {
   void calculate() {
     for (int i = 0; i < controllerList.length; i++) {
       totalList[i] = totalList[i] +
-          int.parse(controllerListStep1[i].value.text) +
-          int.parse(controllerListStep2[i].value.text) +
-          int.parse(controllerListStep3[i].value.text) +
-          int.parse(controllerListStep4[i].value.text) +
-          int.parse(controllerTotalsListStep5[i].value.text) +
-          int.parse(controllerListStep6[i].value.text) +
-          int.parse(controllerListStep7[i].value.text);
+          int.parse(controllerListStep1[i].value.text == '' ? '0' : controllerListStep1[i].value.text) +
+          int.parse(controllerListStep2[i].value.text == '' ? '0' : controllerListStep2[i].value.text) +
+          int.parse(controllerListStep3[i].value.text == '' ? '0' : controllerListStep3[i].value.text) +
+          int.parse(controllerListStep4[i].value.text == '' ? '0' : controllerListStep4[i].value.text) +
+          int.parse(controllerTotalsListStep5[i].text == '' ? '0' : controllerTotalsListStep5[i].text) +
+          int.parse(controllerListStep6[i].value.text == '' ? '0' : controllerListStep6[i].value.text) +
+          int.parse(controllerListStep7[i].value.text == '' ? '0' : controllerListStep7[i].value.text);
     }
   }
 

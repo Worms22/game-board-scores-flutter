@@ -1,4 +1,4 @@
-import 'package:crow/crow.dart' as Crow;
+import 'package:duckma_crow_flutter/duckma_crow_flutter.dart' as Crow;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';

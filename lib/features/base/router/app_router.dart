@@ -1,4 +1,4 @@
-import 'package:crow/crow.dart';
+import 'package:duckma_crow_flutter/duckma_crow_flutter.dart';
 import 'package:game_board_scores/features/base/router/app_routes.dart';
 import 'package:game_board_scores/features/home/presentation/view/pages/home_page.dart';
 import 'package:game_board_scores/features/home/presentation/view/pages/select_player_page.dart';

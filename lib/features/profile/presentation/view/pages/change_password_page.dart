@@ -1,4 +1,4 @@
-import 'package:crow/crow.dart';
+import 'package:duckma_crow_flutter/duckma_crow_flutter.dart';
 import 'package:game_board_scores/features/base/router/app_routes.dart';
 import 'package:game_board_scores/features/profile/bindings/profile_bindings.dart';
 import 'package:game_board_scores/features/profile/presentation/view/screens/change_password_screen.dart';
@@ -6,7 +6,7 @@ import 'package:game_board_scores/features/profile/presentation/view/screens/cha
 class ChangePasswordPage extends Page<dynamic> {
   ChangePasswordPage()
       : super(
-          view: ChangePasswordScreen.new,
+          page: ChangePasswordScreen.new,
           binding: ProfileBinding(),
           name: Routes.changePassword,
         );

@@ -1,6 +1,6 @@
 // ignore_for_file: invalid_use_of_protected_member
 
-import 'package:crow/crow.dart' as Crow show Screen, View ;
+import 'package:duckma_crow_flutter/duckma_crow_flutter.dart' as Crow show Screen, View ;
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 

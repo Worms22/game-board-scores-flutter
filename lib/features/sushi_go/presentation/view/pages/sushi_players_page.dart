@@ -1,4 +1,4 @@
-import 'package:crow/crow.dart';
+import 'package:duckma_crow_flutter/duckma_crow_flutter.dart';
 import 'package:game_board_scores/features/base/router/app_routes.dart';
 import 'package:game_board_scores/features/startpage/bindings/start_binding.dart';
 import 'package:game_board_scores/features/startpage/presentation/view/screens/start_screen.dart';
@@ -11,7 +11,7 @@ class SushiGoPlayersPage extends Page<dynamic> {
   SushiGoPlayersPage()
       : super(
     name: Routes.sushiGoPlayers,
-    view: SushiGoPlayersScreen.new,
+    page: SushiGoPlayersScreen.new,
     binding: SushiGoBinding(),
   );
 }

@@ -27,7 +27,7 @@ Widget sevenWondersRow({
           hint: '0',
           controller: controller,
           textInputAction: TextInputAction.next,
-          textInputType: TextInputType.number,
+          textInputType: TextInputType.phone,
         ),
         const SizedBox(width: 10,),
         Text(

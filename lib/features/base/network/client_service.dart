@@ -1,5 +1,5 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:crow/crow.dart';
+import 'package:duckma_crow_flutter/duckma_crow_flutter.dart';
 import 'package:dio/dio.dart';
 import 'package:duckma_client/duckma_client.dart';
 import 'package:game_board_scores/features/base/api/api.dart';
@@ -18,9 +18,9 @@ class ClientService extends Service {
     _dio = Dio(
       BaseOptions(
         baseUrl: Api.baseUrl,
-        receiveTimeout: 5000,
-        connectTimeout: 5000,
-        sendTimeout: 5000,
+        receiveTimeout: const Duration(seconds: 5000),
+        connectTimeout: const Duration(seconds: 5000),
+        sendTimeout: const Duration(seconds: 5000),
       ),
     );
 

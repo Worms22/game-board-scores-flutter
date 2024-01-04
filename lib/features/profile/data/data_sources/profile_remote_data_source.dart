@@ -1,4 +1,4 @@
-import 'package:crow/crow.dart';
+import 'package:duckma_crow_flutter/duckma_crow_flutter.dart';
 
 abstract class ProfileRemoteDataSource extends RemoteDataSource {
 

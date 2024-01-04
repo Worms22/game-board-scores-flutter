@@ -1,4 +1,4 @@
-import 'package:crow/crow.dart';
+import 'package:duckma_crow_flutter/duckma_crow_flutter.dart';
 import 'package:game_board_scores/features/profile/data/data_sources/profile_remote_data_source.dart';
 import 'package:game_board_scores/features/profile/data/data_sources/profile_remote_data_source_impl.dart';
 import 'package:game_board_scores/features/profile/data/profile_repository_impl.dart';

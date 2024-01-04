@@ -1,4 +1,4 @@
-import 'package:crow/crow.dart';
+import 'package:duckma_crow_flutter/duckma_crow_flutter.dart';
 import 'package:game_board_scores/features/seven_wonders/presentation/view_models/seven_wonders_view_model.dart';
 import 'package:get/get.dart';
 
